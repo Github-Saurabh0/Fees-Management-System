@@ -72,6 +72,7 @@ See the [LICENSE](./LICENSE) file for detailed usage terms.
 
 For suggestions, queries, or collaborations:  
 📧 saurabh@wearl.co.in  
+🔗 LinkedIn: [Saurabhh](https://www.linkedin.com/in/saurabh884095/)
 🔗 GitHub: [github.com/Github-Saurabh0](https://github.com/Github-Saurabh0)  
 📷 Instagram: [@dev.wearl](https://instagram.com/dev.wearl)
 
