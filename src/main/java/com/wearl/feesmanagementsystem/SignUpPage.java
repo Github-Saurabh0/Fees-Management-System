@@ -4,6 +4,8 @@
  */
 package com.wearl.feesmanagementsystem;
 
+import java.awt.Color;
+
 /**
  *
  * @author Saurabh
@@ -46,6 +48,9 @@ public class SignUpPage extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        LoginButton = new javax.swing.JButton();
+        SignUpButton = new javax.swing.JButton();
+        ClearButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sign Up Form - Saurabhh Fees Management System");
@@ -164,6 +169,66 @@ public class SignUpPage extends javax.swing.JFrame {
         getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, 160, -1));
         getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 160, -1));
 
+        LoginButton.setBackground(new java.awt.Color(255, 153, 153));
+        LoginButton.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        LoginButton.setForeground(new java.awt.Color(255, 255, 255));
+        LoginButton.setText("Login");
+        LoginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LoginButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LoginButtonMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LoginButtonMouseExited(evt);
+            }
+        });
+        LoginButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(LoginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 380, 110, 30));
+
+        SignUpButton.setBackground(new java.awt.Color(255, 153, 153));
+        SignUpButton.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        SignUpButton.setForeground(new java.awt.Color(255, 255, 255));
+        SignUpButton.setText("Sign Up");
+        SignUpButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        SignUpButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SignUpButtonMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                SignUpButtonMouseExited(evt);
+            }
+        });
+        SignUpButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SignUpButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(SignUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 110, 30));
+
+        ClearButton.setBackground(new java.awt.Color(255, 153, 153));
+        ClearButton.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        ClearButton.setForeground(new java.awt.Color(255, 255, 255));
+        ClearButton.setText("Clear");
+        ClearButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ClearButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ClearButtonMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ClearButtonMouseExited(evt);
+            }
+        });
+        ClearButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ClearButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ClearButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 110, 30));
+
         setSize(new java.awt.Dimension(714, 508));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -196,6 +261,48 @@ public class SignUpPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
+    private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
+      
+    }//GEN-LAST:event_LoginButtonActionPerformed
+
+    private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
+        LoginButton.setBackground(Color.BLACK);
+        LoginButton.setForeground(Color.WHITE);
+    }//GEN-LAST:event_LoginButtonMouseClicked
+
+    private void LoginButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseExited
+        LoginButton.setBackground(Color.PINK);
+        LoginButton.setForeground(Color.WHITE);
+    }//GEN-LAST:event_LoginButtonMouseExited
+
+    private void SignUpButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignUpButtonMouseClicked
+        SignUpButton.setBackground(Color.BLACK);
+        SignUpButton.setForeground(Color.WHITE);
+    }//GEN-LAST:event_SignUpButtonMouseClicked
+
+    private void SignUpButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignUpButtonMouseExited
+        SignUpButton.setBackground(Color.PINK);
+        SignUpButton.setForeground(Color.WHITE);
+    }//GEN-LAST:event_SignUpButtonMouseExited
+
+    private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SignUpButtonActionPerformed
+
+    private void ClearButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ClearButtonMouseClicked
+        ClearButton.setBackground(Color.BLACK);
+        ClearButton.setForeground(Color.WHITE);
+    }//GEN-LAST:event_ClearButtonMouseClicked
+
+    private void ClearButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ClearButtonMouseExited
+        ClearButton.setBackground(Color.PINK);
+        ClearButton.setForeground(Color.WHITE);
+    }//GEN-LAST:event_ClearButtonMouseExited
+
+    private void ClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ClearButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -222,6 +329,9 @@ public class SignUpPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ClearButton;
+    private javax.swing.JButton LoginButton;
+    private javax.swing.JButton SignUpButton;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
