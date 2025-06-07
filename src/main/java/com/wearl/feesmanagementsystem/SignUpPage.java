@@ -34,20 +34,18 @@ public class SignUpPage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        Contactnumber = new javax.swing.JTextField();
+        Firstname = new javax.swing.JTextField();
+        Lastname = new javax.swing.JTextField();
+        Password = new javax.swing.JPasswordField();
+        Username = new javax.swing.JTextField();
+        Cpassword = new javax.swing.JTextField();
+        Dob = new com.toedter.calendar.JDateChooser();
         LoginButton = new javax.swing.JButton();
         SignUpButton = new javax.swing.JButton();
         ClearButton = new javax.swing.JButton();
@@ -74,100 +72,87 @@ public class SignUpPage extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 102));
         jLabel2.setText("Contact Number ");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 102));
         jLabel3.setText("First Name");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, -1, -1));
-
-        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel4.setText("Middle Name");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 102));
         jLabel5.setText("Last Name");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 102));
         jLabel6.setText("Username");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 102));
         jLabel7.setText("Password");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 102));
         jLabel8.setText("Confirm password");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 102));
         jLabel9.setText("D.O.B");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, -1, -1));
 
-        jTextField1.setFont(new java.awt.Font("Trebuchet MS", 1, 15)); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Contactnumber.setFont(new java.awt.Font("Trebuchet MS", 1, 15)); // NOI18N
+        Contactnumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                ContactnumberActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 320, 160, -1));
+        getContentPane().add(Contactnumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, 160, -1));
 
-        jTextField2.setFont(new java.awt.Font("Trebuchet MS", 1, 15)); // NOI18N
-        jTextField2.setToolTipText("");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        Firstname.setFont(new java.awt.Font("Trebuchet MS", 1, 15)); // NOI18N
+        Firstname.setToolTipText("");
+        Firstname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                FirstnameActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 160, -1));
+        getContentPane().add(Firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 160, -1));
 
-        jTextField3.setFont(new java.awt.Font("Trebuchet MS", 1, 15)); // NOI18N
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        Lastname.setFont(new java.awt.Font("Trebuchet MS", 1, 15)); // NOI18N
+        Lastname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                LastnameActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 160, -1));
+        getContentPane().add(Lastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, 160, -1));
 
-        jTextField4.setFont(new java.awt.Font("Trebuchet MS", 1, 15)); // NOI18N
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        Password.setFont(new java.awt.Font("Trebuchet MS", 1, 15)); // NOI18N
+        Password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                PasswordActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 160, -1));
+        getContentPane().add(Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, 160, -1));
 
-        jPasswordField1.setFont(new java.awt.Font("Trebuchet MS", 1, 15)); // NOI18N
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        Username.setFont(new java.awt.Font("Trebuchet MS", 1, 15)); // NOI18N
+        Username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                UsernameActionPerformed(evt);
             }
         });
-        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 160, -1));
+        getContentPane().add(Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 160, -1));
 
-        jTextField5.setFont(new java.awt.Font("Trebuchet MS", 1, 15)); // NOI18N
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        Cpassword.setFont(new java.awt.Font("Trebuchet MS", 1, 15)); // NOI18N
+        Cpassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                CpasswordActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 160, -1));
-
-        jTextField6.setFont(new java.awt.Font("Trebuchet MS", 1, 15)); // NOI18N
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, 160, -1));
-        getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 160, -1));
+        getContentPane().add(Cpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 250, 160, -1));
+        getContentPane().add(Dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, 160, -1));
 
         LoginButton.setBackground(new java.awt.Color(255, 153, 153));
         LoginButton.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
@@ -187,7 +172,7 @@ public class SignUpPage extends javax.swing.JFrame {
                 LoginButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(LoginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 380, 110, 30));
+        getContentPane().add(LoginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 370, 110, 30));
 
         SignUpButton.setBackground(new java.awt.Color(255, 153, 153));
         SignUpButton.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
@@ -207,7 +192,7 @@ public class SignUpPage extends javax.swing.JFrame {
                 SignUpButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(SignUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 110, 30));
+        getContentPane().add(SignUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, 110, 30));
 
         ClearButton.setBackground(new java.awt.Color(255, 153, 153));
         ClearButton.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
@@ -227,39 +212,35 @@ public class SignUpPage extends javax.swing.JFrame {
                 ClearButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(ClearButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 110, 30));
+        getContentPane().add(ClearButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 370, 110, 30));
 
         setSize(new java.awt.Dimension(714, 508));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void ContactnumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContactnumberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_ContactnumberActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void FirstnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstnameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_FirstnameActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void LastnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LastnameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_LastnameActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void UsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_UsernameActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void CpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CpasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_CpasswordActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
-
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_PasswordActionPerformed
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
       
@@ -330,25 +311,23 @@ public class SignUpPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ClearButton;
+    private javax.swing.JTextField Contactnumber;
+    private javax.swing.JTextField Cpassword;
+    private com.toedter.calendar.JDateChooser Dob;
+    private javax.swing.JTextField Firstname;
+    private javax.swing.JTextField Lastname;
     private javax.swing.JButton LoginButton;
+    private javax.swing.JPasswordField Password;
     private javax.swing.JButton SignUpButton;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private javax.swing.JTextField Username;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 }
