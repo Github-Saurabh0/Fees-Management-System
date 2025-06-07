@@ -5,6 +5,8 @@
 package com.wearl.feesmanagementsystem;
 
 import java.awt.Color;
+import java.util.Date;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -267,7 +269,7 @@ public class SignUpPage extends javax.swing.JFrame {
     }//GEN-LAST:event_SignUpButtonMouseExited
 
     private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpButtonActionPerformed
-        // TODO add your handling code here:
+        Validation();
     }//GEN-LAST:event_SignUpButtonActionPerformed
 
     private void ClearButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ClearButtonMouseClicked
@@ -284,6 +286,59 @@ public class SignUpPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ClearButtonActionPerformed
 
+    String Fname, Lname, Uname, Pwd, Cpwd, Cnumber ;
+    Date dob;
+    
+    boolean Validation()
+    {
+        
+        Fname = Firstname.getText();
+        Lname = Lastname.getText();
+        Uname = Username.getText();
+        Pwd = Password.getText();
+        Cpwd = Cpassword.getText();
+        Cnumber = Contactnumber.getText();
+        dob = Dob.getDate();
+        
+        if (Fname.equals("")) {
+            JOptionPane.showMessageDialog(this, "Please enter First Name....." );
+            return false;
+        }
+        if (Lname.equals("")) {
+            JOptionPane.showMessageDialog(this, "Please enter Last Name....." );
+            return false;
+        }
+        if (Uname.equals("")) {
+            JOptionPane.showMessageDialog(this, "Please enter Username....." );
+            return false;
+        }
+        if (Pwd.equals("")) {
+            JOptionPane.showMessageDialog(this, "Please enter Password....." );
+            return false;
+        }
+        if (Cpwd.equals("")) {
+            JOptionPane.showMessageDialog(this, "Please enter Confirm Password....." );
+            return false;
+        }
+        
+        try
+        {
+        if (dob == null) {    
+            JOptionPane.showMessageDialog(this, "Please Select Date Of Birth....." );
+            return false;
+        }
+        }catch(NullPointerException e1)
+        {
+        }
+      
+        if (Cnumber.equals("")) {
+            JOptionPane.showMessageDialog(this, "Please enter Contact Number....." );
+            return false;
+        }
+        return true;
+    }
+    
+    
     /**
      * @param args the command line arguments
      */
