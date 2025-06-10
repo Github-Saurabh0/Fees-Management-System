@@ -350,16 +350,6 @@ public class SignUpPage extends javax.swing.JFrame {
     String Fname, Lname, Uname, Pwd, Cpwd, Cnumber ;
     Date dob;
     
-    
-    void insertData()
-    {
-        
-        
-        
-    }
-    
-    
-    
     boolean Validation()
     {
         
