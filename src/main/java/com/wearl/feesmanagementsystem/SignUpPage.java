@@ -5,7 +5,9 @@
 package com.wearl.feesmanagementsystem;
 
 import java.awt.Color;
+import java.sql.*;
 import java.util.Date;
+import java.text.*;
 import javax.swing.JOptionPane;
 
 /**
@@ -13,8 +15,40 @@ import javax.swing.JOptionPane;
  * @author Saurabh
  */
 public class SignUpPage extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(SignUpPage.class.getName());
+
+    
+    int id = 0;
+
+    int getId() {
+        ResultSet rs = null;
+        try {
+            // 1. Loading Driver   
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url = "jdbc:mysql://localhost:3306/wtfmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL";
+
+            // 2. Establishing Connection
+            Connection con = DriverManager.getConnection(url, "root", "Jaimaiki12345#");
+
+            // Correct SELECT query to get max(id)
+            String sql = "SELECT MAX(id) FROM signup";
+            Statement st = con.createStatement();
+
+            // executeQuery is correct here because SELECT returns a ResultSet
+            rs = st.executeQuery(sql);
+
+            // Extract value from ResultSet
+            while (rs.next()) {
+                id = rs.getInt(1);  // Column index starts from 1
+                id++;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return id;
+    }
 
     /**
      * Creates new form SignUpPage
@@ -282,7 +316,7 @@ public class SignUpPage extends javax.swing.JFrame {
     }//GEN-LAST:event_txttxtPasswordActionPerformed
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
-      
+
     }//GEN-LAST:event_LoginButtonActionPerformed
 
     private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
@@ -306,7 +340,15 @@ public class SignUpPage extends javax.swing.JFrame {
     }//GEN-LAST:event_SignUpButtonMouseExited
 
     private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpButtonActionPerformed
-        Validation();
+        //Validation();
+        if(Validation())
+        {
+            insertData();
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(this,"Validation issue");
+        }
     }//GEN-LAST:event_SignUpButtonActionPerformed
 
     private void ClearButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ClearButtonMouseClicked
@@ -347,12 +389,50 @@ public class SignUpPage extends javax.swing.JFrame {
         mobileNumberCheck();
     }//GEN-LAST:event_ContactnumberKeyTyped
 
-    String Fname, Lname, Uname, Pwd, Cpwd, Cnumber ;
+    String Fname, Lname, Uname, Pwd, Cpwd, Cnumber;
     Date dob;
-    
-    boolean Validation()
-    {
-        
+
+    void insertData() {
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/dd/MM");
+        String Dobfinal = sdf.format(dob);
+
+        try {
+            //1. Loading Driver   
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url = "jdbc:mysql://localhost:3306/wtfmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL";
+            //2. Establishing Statement or Connection
+            Connection con = DriverManager.getConnection(url, "root", "Jaimaiki12345#");
+            // Ek normal insert query chala rha hu jisse me jo signup table banaya hai abhi usne data ko insert kar saki
+            String sql = "Insert into signup values(?, ? ,? ,? ,? ,?, ?)";
+            //3. con ke pass ek prepareStatement nam ka function hota hai or ye preparedStatement naam ka data return krta hai  
+            PreparedStatement st = con.prepareStatement(sql);
+
+            st.setInt(1, getId());
+            st.setString(2, Fname);
+            st.setString(3, Lname);
+            st.setString(4, Uname);
+            st.setString(5, Pwd);
+            st.setString(6, Dobfinal);
+            st.setString(7, Cnumber);
+            int i =st.executeUpdate();
+            if(i>0)
+            {
+                JOptionPane.showMessageDialog(this, "Record Inserted Successfully");
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(this, "Record Not Inserted Successfully");
+            }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    boolean Validation() {
+
         Fname = Firstname.getText();
         Lname = Lastname.getText();
         Uname = Username.getText();
@@ -360,72 +440,62 @@ public class SignUpPage extends javax.swing.JFrame {
         Cpwd = Cpassword.getText();
         Cnumber = Contactnumber.getText();
         dob = Dob.getDate();
-        
+
         if (Fname.equals("")) {
-            JOptionPane.showMessageDialog(this, "Please enter First Name....." );
+            JOptionPane.showMessageDialog(this, "Please enter First Name.....");
             return false;
         }
         if (Lname.equals("")) {
-            JOptionPane.showMessageDialog(this, "Please enter Last Name....." );
+            JOptionPane.showMessageDialog(this, "Please enter Last Name.....");
             return false;
         }
         if (Uname.equals("")) {
-            JOptionPane.showMessageDialog(this, "Please enter Username....." );
+            JOptionPane.showMessageDialog(this, "Please enter Username.....");
             return false;
         }
         if (Pwd.equals("")) {
-            JOptionPane.showMessageDialog(this, "Please enter Password....." );
+            JOptionPane.showMessageDialog(this, "Please enter Password.....");
             return false;
         }
         if (Cpwd.equals("")) {
-            JOptionPane.showMessageDialog(this, "Please enter Confirm Password....." );
+            JOptionPane.showMessageDialog(this, "Please enter Confirm Password.....");
             return false;
         }
-        
-        try
-        {
-        if (dob == null) {    
-            JOptionPane.showMessageDialog(this, "Please Select Date Of Birth....." );
-            return false;
+
+        try {
+            if (dob == null) {
+                JOptionPane.showMessageDialog(this, "Please Select Date Of Birth.....");
+                return false;
+            }
+        } catch (NullPointerException e1) {
         }
-        }catch(NullPointerException e1)
-        {
-        }
-      
+
         if (Cnumber.equals("")) {
-            JOptionPane.showMessageDialog(this, "Please enter Contact Number....." );
+            JOptionPane.showMessageDialog(this, "Please enter Contact Number.....");
             return false;
         }
         return true;
     }
-    
-    void passwordCheck()
-    {
+
+    void passwordCheck() {
         Pwd = txtPassword.getText();
-        if(Pwd.length()>=8)
-        {
+        if (Pwd.length() >= 8) {
             LablePasswordcheck.setText("");
-        }
-        else
-        {
+        } else {
             LablePasswordcheck.setText("Accept Only 8 Digit Pwd");
         }
     }
-    
-    void mobileNumberCheck()
-    {
+
+    void mobileNumberCheck() {
         Cnumber = Contactnumber.getText();
-        
-        if(Cnumber.length()==10)
-        {
+
+        if (Cnumber.length() == 10) {
             LableMobileNocheck.setText("");
-        }
-        else
-        {
+        } else {
             LableMobileNocheck.setText("Enter 10 Digit No.");
         }
     }
-    
+
     
     /**
      * @param args the command line arguments
