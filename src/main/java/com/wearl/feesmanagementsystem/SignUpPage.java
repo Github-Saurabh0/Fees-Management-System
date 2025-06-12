@@ -98,11 +98,11 @@ public class SignUpPage extends javax.swing.JFrame {
         setLocation(new java.awt.Point(0, 0));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 102, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 0, 51));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Sign Up");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, -1, -1));
 
@@ -215,7 +215,7 @@ public class SignUpPage extends javax.swing.JFrame {
         getContentPane().add(Cpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 160, -1));
         getContentPane().add(Dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 160, -1));
 
-        LoginButton.setBackground(new java.awt.Color(255, 153, 153));
+        LoginButton.setBackground(new java.awt.Color(51, 102, 255));
         LoginButton.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         LoginButton.setForeground(new java.awt.Color(255, 255, 255));
         LoginButton.setText("Login");
@@ -235,7 +235,7 @@ public class SignUpPage extends javax.swing.JFrame {
         });
         getContentPane().add(LoginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 370, 110, 30));
 
-        SignUpButton.setBackground(new java.awt.Color(255, 153, 153));
+        SignUpButton.setBackground(new java.awt.Color(255, 102, 153));
         SignUpButton.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         SignUpButton.setForeground(new java.awt.Color(255, 255, 255));
         SignUpButton.setText("Sign Up");
@@ -255,7 +255,7 @@ public class SignUpPage extends javax.swing.JFrame {
         });
         getContentPane().add(SignUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, 110, 30));
 
-        ClearButton.setBackground(new java.awt.Color(255, 153, 153));
+        ClearButton.setBackground(new java.awt.Color(0, 204, 0));
         ClearButton.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         ClearButton.setForeground(new java.awt.Color(255, 255, 255));
         ClearButton.setText("Clear");
