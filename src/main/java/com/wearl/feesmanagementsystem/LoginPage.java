@@ -4,7 +4,11 @@
  */
 package com.wearl.feesmanagementsystem;
 
-import java.awt.Color;
+import java.awt.*;
+import java.sql.*;
+import java.util.Date;
+import java.text.*;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Saurabh
@@ -33,6 +37,7 @@ public class LoginPage extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         username = new javax.swing.JTextField();
@@ -55,21 +60,24 @@ public class LoginPage extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 204));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/wearl/feesmanagementsystem/Icons/Login.png"))); // NOI18N
+        jLabel1.setLabelFor(jLabel1);
         jLabel1.setText("Login");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 160, 70));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 100, 70));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Login.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, 80, 50));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 90));
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/wearl/feesmanagementsystem/Icons/user.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user.png"))); // NOI18N
         jLabel2.setText("Username");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/wearl/feesmanagementsystem/Icons/password.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/password.png"))); // NOI18N
         jLabel3.setText("Password");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, 150, -1));
 
@@ -237,6 +245,7 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField passwordf;
     private javax.swing.JTextField username;
