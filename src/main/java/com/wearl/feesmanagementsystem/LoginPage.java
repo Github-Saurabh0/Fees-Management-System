@@ -195,7 +195,9 @@ public class LoginPage extends javax.swing.JFrame {
     }//GEN-LAST:event_SignUpButtonMouseExited
 
     private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpButtonActionPerformed
-       
+       SignUpPage S1 = new SignUpPage();
+       S1.show();
+       this.dispose();
     }//GEN-LAST:event_SignUpButtonActionPerformed
 
     private void ClearButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ClearButtonMouseClicked
