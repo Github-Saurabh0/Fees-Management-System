@@ -210,7 +210,10 @@ public class LoginPage extends javax.swing.JFrame {
             
             if(rs.next())
             {
-                JOptionPane.showMessageDialog(this, "Login Successfull");
+                // JOptionPane.showMessageDialog(this, "Login Successfull");
+                Homepage Hp = new Homepage();
+                Hp.setVisible(true);
+                this.dispose();
             }
             else
             {
