@@ -190,6 +190,40 @@ public class LoginPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordfActionPerformed
 
+    void validation(String Uname, String Pwd)
+    {
+         try {
+            //1. Loading Driver   
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url = "jdbc:mysql://localhost:3306/wtfmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL";
+            //2. Establishing Statement or Connection
+            Connection con = DriverManager.getConnection(url, "root", "Jaimaiki12345#");
+            // Ek normal Select query chala rha hu jisse me signup table jo data hai usko check kruga
+            String sql = "Select * from signup Uname=? and Pwd=?";
+            //3. con ke pass ek prepareStatement nam ka function hota hai or ye preparedStatement naam ka data return krta hai  
+            PreparedStatement st = con.prepareStatement(sql);
+            
+            st.setString(1, Uname);
+            st.setString(2, Pwd);
+            
+            ResultSet rs = st.executeQuery();
+            
+            if(rs.next())
+            {
+                JOptionPane.showMessageDialog(this, "Login Successfull");
+            }
+            else
+            {
+                 JOptionPane.showMessageDialog(this, "Incorrect Username or Password");
+            }
+ 
+         }
+         catch(Exception e)
+         {
+             e.printStackTrace();
+         }
+    }
+    
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
         
         String Uname, Pwd;
@@ -205,8 +239,12 @@ public class LoginPage extends javax.swing.JFrame {
               PwdEnterError.setText("Enter Password");
           }
         
+        validation(Uname, Pwd);
+        
     }//GEN-LAST:event_LoginButtonActionPerformed
 
+    
+    
     private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
         LoginButton.setBackground(Color.BLACK);
         LoginButton.setForeground(Color.WHITE);
