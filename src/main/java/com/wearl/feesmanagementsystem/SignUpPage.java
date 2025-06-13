@@ -461,13 +461,13 @@ public class SignUpPage extends javax.swing.JFrame {
         {
             LableCPasswordcheck.setForeground(Color.GREEN);
             LableCPasswordcheck.setText("Password Matched");
-            // Timer to clear message after 3 seconds
+            // Timer to clear message after 3 seconds 
         Timer timer = new Timer(3000, new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 LableCPasswordcheck.setText(""); // clear the message
             }
         });
-        timer.setRepeats(false); // run only once
+        timer.setRepeats(false); // run only once 
         timer.start();
         }
         else
