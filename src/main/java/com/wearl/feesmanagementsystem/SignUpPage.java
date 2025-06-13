@@ -85,7 +85,7 @@ public class SignUpPage extends javax.swing.JFrame {
         SignUpButton = new javax.swing.JButton();
         ClearButton = new javax.swing.JButton();
         LablePasswordcheck = new javax.swing.JLabel();
-        LableConfirmPasswordcheck = new javax.swing.JLabel();
+        LableCPasswordcheck = new javax.swing.JLabel();
         LableMobileNocheck = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -211,6 +211,17 @@ public class SignUpPage extends javax.swing.JFrame {
                 CpasswordActionPerformed(evt);
             }
         });
+        Cpassword.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                CpasswordKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                CpasswordKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                CpasswordKeyTyped(evt);
+            }
+        });
         getContentPane().add(Cpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 160, -1));
         getContentPane().add(Dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 160, -1));
 
@@ -278,9 +289,9 @@ public class SignUpPage extends javax.swing.JFrame {
         LablePasswordcheck.setForeground(new java.awt.Color(255, 51, 51));
         getContentPane().add(LablePasswordcheck, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 220, -1, 20));
 
-        LableConfirmPasswordcheck.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
-        LableConfirmPasswordcheck.setForeground(new java.awt.Color(255, 51, 51));
-        getContentPane().add(LableConfirmPasswordcheck, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 250, -1, 20));
+        LableCPasswordcheck.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
+        LableCPasswordcheck.setForeground(new java.awt.Color(255, 51, 51));
+        getContentPane().add(LableCPasswordcheck, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 250, -1, 20));
 
         LableMobileNocheck.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
         LableMobileNocheck.setForeground(new java.awt.Color(255, 51, 51));
@@ -388,6 +399,18 @@ public class SignUpPage extends javax.swing.JFrame {
         mobileNumberCheck();
     }//GEN-LAST:event_ContactnumberKeyTyped
 
+    private void CpasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CpasswordKeyPressed
+        pwdandCpwdCheck();
+    }//GEN-LAST:event_CpasswordKeyPressed
+
+    private void CpasswordKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CpasswordKeyReleased
+        pwdandCpwdCheck();
+    }//GEN-LAST:event_CpasswordKeyReleased
+
+    private void CpasswordKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CpasswordKeyTyped
+        pwdandCpwdCheck();
+    }//GEN-LAST:event_CpasswordKeyTyped
+
     String Fname, Lname, Uname, Pwd, Cpwd, Cnumber;
     Date dob;
 
@@ -426,6 +449,23 @@ public class SignUpPage extends javax.swing.JFrame {
         }
 
     }
+    
+    void pwdandCpwdCheck()
+    {
+        Pwd = txtPassword.getText();
+        Cpwd = Cpassword.getText();
+        if(Pwd.equals(Cpwd))
+        {
+            LableCPasswordcheck.setForeground(Color.GREEN);
+            LableCPasswordcheck.setText("Password Matched");
+        }
+        else
+        {
+            LableCPasswordcheck.setText("Password Not Match");
+
+        }
+    }
+    
 
     void clearField() {
         Firstname.setText("");
@@ -533,7 +573,7 @@ public class SignUpPage extends javax.swing.JFrame {
     private javax.swing.JTextField Cpassword;
     private com.toedter.calendar.JDateChooser Dob;
     private javax.swing.JTextField Firstname;
-    private javax.swing.JLabel LableConfirmPasswordcheck;
+    private javax.swing.JLabel LableCPasswordcheck;
     private javax.swing.JLabel LableMobileNocheck;
     private javax.swing.JLabel LablePasswordcheck;
     private javax.swing.JTextField Lastname;
