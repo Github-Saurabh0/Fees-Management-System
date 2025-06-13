@@ -45,6 +45,8 @@ public class LoginPage extends javax.swing.JFrame {
         LoginButton = new javax.swing.JButton();
         SignUpButton = new javax.swing.JButton();
         ClearButton = new javax.swing.JButton();
+        UnameEnterError = new javax.swing.JLabel();
+        PwdEnterError = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sign Up Form - Saurabhh Fees Management System");
@@ -88,12 +90,22 @@ public class LoginPage extends javax.swing.JFrame {
                 usernameActionPerformed(evt);
             }
         });
+        username.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                usernameKeyTyped(evt);
+            }
+        });
         getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 180, 160, 30));
 
         passwordf.setFont(new java.awt.Font("Trebuchet MS", 1, 15)); // NOI18N
         passwordf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordfActionPerformed(evt);
+            }
+        });
+        passwordf.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                passwordfKeyTyped(evt);
             }
         });
         getContentPane().add(passwordf, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 230, 160, 30));
@@ -158,6 +170,14 @@ public class LoginPage extends javax.swing.JFrame {
         });
         getContentPane().add(ClearButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, 110, 30));
 
+        UnameEnterError.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        UnameEnterError.setForeground(new java.awt.Color(255, 0, 51));
+        getContentPane().add(UnameEnterError, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 190, -1, -1));
+
+        PwdEnterError.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        PwdEnterError.setForeground(new java.awt.Color(255, 0, 51));
+        getContentPane().add(PwdEnterError, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, -1, -1));
+
         setSize(new java.awt.Dimension(714, 508));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -171,7 +191,20 @@ public class LoginPage extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordfActionPerformed
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
-
+        
+        String Uname, Pwd;
+        Uname = username.getText();
+        Pwd = passwordf.getText();
+        
+        if(Uname.equals(""))
+          {
+              UnameEnterError.setText("Enter Username");
+          }
+        else if(Pwd.equals(""))
+          {
+              PwdEnterError.setText("Enter Password");
+          }
+        
     }//GEN-LAST:event_LoginButtonActionPerformed
 
     private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
@@ -214,6 +247,14 @@ public class LoginPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ClearButtonActionPerformed
 
+    private void usernameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usernameKeyTyped
+        UnameEnterError.setText("");
+    }//GEN-LAST:event_usernameKeyTyped
+
+    private void passwordfKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordfKeyTyped
+        PwdEnterError.setText("");
+    }//GEN-LAST:event_passwordfKeyTyped
+
     
     /**
      * @param args the command line arguments
@@ -243,7 +284,9 @@ public class LoginPage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ClearButton;
     private javax.swing.JButton LoginButton;
+    private javax.swing.JLabel PwdEnterError;
     private javax.swing.JButton SignUpButton;
+    private javax.swing.JLabel UnameEnterError;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
