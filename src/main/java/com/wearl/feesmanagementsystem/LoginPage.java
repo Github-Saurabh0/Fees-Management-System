@@ -199,7 +199,7 @@ public class LoginPage extends javax.swing.JFrame {
             //2. Establishing Statement or Connection
             Connection con = DriverManager.getConnection(url, "root", "Jaimaiki12345#");
             // Ek normal Select query chala rha hu jisse me signup table jo data hai usko check kruga
-            String sql = "Select * from signup Uname=? and Pwd=?";
+            String sql = "Select * from signup Where Uname=? and Pwd=?";
             //3. con ke pass ek prepareStatement nam ka function hota hai or ye preparedStatement naam ka data return krta hai  
             PreparedStatement st = con.prepareStatement(sql);
             
