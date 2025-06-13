@@ -18,7 +18,6 @@ public class SignUpPage extends javax.swing.JFrame {
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(SignUpPage.class.getName());
 
-    
     int id = 0;
 
     int getId() {
@@ -316,10 +315,10 @@ public class SignUpPage extends javax.swing.JFrame {
     }//GEN-LAST:event_txttxtPasswordActionPerformed
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
-LoginPage l1 = new LoginPage();
-l1.show();
-this.dispose();
-        
+        LoginPage l1 = new LoginPage();
+        l1.show();
+        this.dispose();
+
     }//GEN-LAST:event_LoginButtonActionPerformed
 
     private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
@@ -344,13 +343,10 @@ this.dispose();
 
     private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpButtonActionPerformed
         //Validation();
-        if(Validation())
-        {
+        if (Validation()) {
             insertData();
-        }
-        else
-        {
-            JOptionPane.showMessageDialog(this,"Validation issue");
+        } else {
+            JOptionPane.showMessageDialog(this, "Validation issue");
         }
     }//GEN-LAST:event_SignUpButtonActionPerformed
 
@@ -365,7 +361,7 @@ this.dispose();
     }//GEN-LAST:event_ClearButtonMouseExited
 
     private void ClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearButtonActionPerformed
-        // TODO add your handling code here:
+        clearField();      // TODO add your handling code here:
     }//GEN-LAST:event_ClearButtonActionPerformed
 
     private void txttxtPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txttxtPasswordKeyPressed
@@ -418,20 +414,27 @@ this.dispose();
             st.setString(5, Pwd);
             st.setString(6, Dobfinal);
             st.setString(7, Cnumber);
-            int i =st.executeUpdate();
-            if(i>0)
-            {
+            int i = st.executeUpdate();
+            if (i > 0) {
                 JOptionPane.showMessageDialog(this, "Record Inserted Successfully");
-            }
-            else
-            {
+            } else {
                 JOptionPane.showMessageDialog(this, "Record Not Inserted Successfully");
             }
-            
+
         } catch (Exception e) {
             e.printStackTrace();
         }
 
+    }
+
+    void clearField() {
+        Firstname.setText("");
+        Lastname.setText("");
+        Username.setText("");
+        txtPassword.setText("");
+        Cpassword.setText("");
+        Contactnumber.setText("");
+        Dob.setDate(null);
     }
 
     boolean Validation() {
@@ -499,7 +502,6 @@ this.dispose();
         }
     }
 
-    
     /**
      * @param args the command line arguments
      */
