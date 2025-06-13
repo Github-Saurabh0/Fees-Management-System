@@ -475,6 +475,10 @@ public class SignUpPage extends javax.swing.JFrame {
         Cpassword.setText("");
         Contactnumber.setText("");
         Dob.setDate(null);
+        LablePasswordcheck.setText("");
+        LableCPasswordcheck.setText("");
+        LableMobileNocheck.setText("");
+        
     }
 
     boolean Validation() {
