@@ -182,7 +182,7 @@ public class LoginPage extends javax.swing.JFrame {
         PwdEnterError.setForeground(new java.awt.Color(255, 0, 51));
         getContentPane().add(PwdEnterError, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, -1, -1));
 
-        jPanel2.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 153));
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 700, 410));
 
         setSize(new java.awt.Dimension(714, 508));
