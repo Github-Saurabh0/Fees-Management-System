@@ -47,6 +47,7 @@ public class LoginPage extends javax.swing.JFrame {
         ClearButton = new javax.swing.JButton();
         UnameEnterError = new javax.swing.JLabel();
         PwdEnterError = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sign Up Form - Saurabhh Fees Management System");
@@ -85,6 +86,7 @@ public class LoginPage extends javax.swing.JFrame {
 
         username.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         username.setToolTipText("");
+        username.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usernameActionPerformed(evt);
@@ -98,6 +100,7 @@ public class LoginPage extends javax.swing.JFrame {
         getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 180, 160, 30));
 
         passwordf.setFont(new java.awt.Font("Trebuchet MS", 1, 15)); // NOI18N
+        passwordf.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         passwordf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordfActionPerformed(evt);
@@ -114,6 +117,7 @@ public class LoginPage extends javax.swing.JFrame {
         LoginButton.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
         LoginButton.setForeground(new java.awt.Color(255, 255, 255));
         LoginButton.setText("Login");
+        LoginButton.setBorder(null);
         LoginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LoginButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -177,6 +181,9 @@ public class LoginPage extends javax.swing.JFrame {
         PwdEnterError.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         PwdEnterError.setForeground(new java.awt.Color(255, 0, 51));
         getContentPane().add(PwdEnterError, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, -1, -1));
+
+        jPanel2.setBackground(new java.awt.Color(204, 255, 255));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 700, 410));
 
         setSize(new java.awt.Dimension(714, 508));
         setLocationRelativeTo(null);
@@ -333,6 +340,7 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField passwordf;
     private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables

@@ -90,6 +90,7 @@ public class SignUpPage extends javax.swing.JFrame {
         LablePasswordcheck = new javax.swing.JLabel();
         LableCPasswordcheck = new javax.swing.JLabel();
         LableMobileNocheck = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sign Up Form - Saurabhh Fees Management System");
@@ -299,6 +300,9 @@ public class SignUpPage extends javax.swing.JFrame {
         LableMobileNocheck.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
         LableMobileNocheck.setForeground(new java.awt.Color(255, 51, 51));
         getContentPane().add(LableMobileNocheck, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, -1, 20));
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 204));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 700, 430));
 
         setSize(new java.awt.Dimension(714, 508));
         setLocationRelativeTo(null);
@@ -604,6 +608,7 @@ public class SignUpPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables
 }
