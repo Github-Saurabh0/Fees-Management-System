@@ -37,8 +37,8 @@ public class Dashboard extends javax.swing.JFrame {
         UnameEnterError = new javax.swing.JLabel();
         PwdEnterError = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        Addfeespanel = new javax.swing.JPanel();
+        Addfees = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
@@ -85,14 +85,24 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 204));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel4.setBackground(new java.awt.Color(255, 204, 0));
+        Addfeespanel.setBackground(new java.awt.Color(255, 204, 0));
+        Addfeespanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AddfeespanelMouseClicked(evt);
+            }
+        });
 
-        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Add fees");
-        jPanel4.add(jLabel4);
+        Addfees.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        Addfees.setForeground(new java.awt.Color(255, 255, 255));
+        Addfees.setText("Add fees");
+        Addfees.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AddfeesMouseClicked(evt);
+            }
+        });
+        Addfeespanel.add(Addfees);
 
-        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 110, 30));
+        jPanel2.add(Addfeespanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 110, 30));
 
         jPanel5.setBackground(new java.awt.Color(255, 204, 0));
 
@@ -193,6 +203,18 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_LogoutActionPerformed
 
+    private void AddfeespanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddfeespanelMouseClicked
+        Addfees Af = new Addfees();
+        Af.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_AddfeespanelMouseClicked
+
+    private void AddfeesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddfeesMouseClicked
+        Addfees Af = new Addfees();
+        Af.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_AddfeesMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -220,13 +242,14 @@ public class Dashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton About;
+    private javax.swing.JLabel Addfees;
+    private javax.swing.JPanel Addfeespanel;
     private javax.swing.JButton Logout;
     private javax.swing.JLabel PwdEnterError;
     private javax.swing.JLabel UnameEnterError;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -234,7 +257,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
