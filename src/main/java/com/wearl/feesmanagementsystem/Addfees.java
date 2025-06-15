@@ -38,7 +38,7 @@ public class Addfees extends javax.swing.JFrame {
         PwdEnterError = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        Home = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -49,12 +49,13 @@ public class Addfees extends javax.swing.JFrame {
         jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Dashboard - Saurabhh Fees Management System");
+        setTitle("Add Fees - Saurabhh Fees Management System");
         setAlwaysOnTop(true);
         setBackground(new java.awt.Color(204, 204, 255));
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(new java.awt.Point(0, 0));
+        setMinimumSize(new java.awt.Dimension(700, 530));
         setPreferredSize(new java.awt.Dimension(700, 600));
         setSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -79,21 +80,27 @@ public class Addfees extends javax.swing.JFrame {
         getContentPane().add(PwdEnterError, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 255));
+        jPanel2.setMinimumSize(new java.awt.Dimension(700, 430));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel3.setBackground(new java.awt.Color(204, 255, 255));
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 490, 410));
 
-        jButton2.setBackground(new java.awt.Color(255, 51, 102));
-        jButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Home");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+        Home.setBackground(new java.awt.Color(255, 51, 102));
+        Home.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        Home.setForeground(new java.awt.Color(255, 255, 255));
+        Home.setText("Home");
+        Home.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                HomeMouseClicked(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 160, 30));
+        Home.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HomeActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 160, 30));
 
         jButton3.setBackground(new java.awt.Color(255, 51, 102));
         jButton3.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
@@ -169,9 +176,9 @@ public class Addfees extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void HomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_HomeActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -196,6 +203,13 @@ public class Addfees extends javax.swing.JFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void HomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeMouseClicked
+        
+        Dashboard Db = new Dashboard();
+        Db.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_HomeMouseClicked
 
     /**
      * @param args the command line arguments
@@ -223,9 +237,9 @@ public class Addfees extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Home;
     private javax.swing.JLabel PwdEnterError;
     private javax.swing.JLabel UnameEnterError;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
