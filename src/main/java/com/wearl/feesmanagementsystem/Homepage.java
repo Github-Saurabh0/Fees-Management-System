@@ -35,6 +35,9 @@ public class Homepage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         UnameEnterError = new javax.swing.JLabel();
         PwdEnterError = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        Next = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Dashboard - Saurabhh Fees Management System");
@@ -51,7 +54,7 @@ public class Homepage extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 204));
         jLabel1.setLabelFor(jLabel1);
-        jLabel1.setText("Welcome To Homepage");
+        jLabel1.setText("Welcome To Dashboard");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 410, 70));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 700, 90));
@@ -64,9 +67,43 @@ public class Homepage extends javax.swing.JFrame {
         PwdEnterError.setForeground(new java.awt.Color(255, 0, 51));
         getContentPane().add(PwdEnterError, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, -1, -1));
 
+        jPanel2.setBackground(new java.awt.Color(255, 233, 154));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 190));
+
+        jPanel3.setBackground(new java.awt.Color(255, 204, 255));
+
+        Next.setBackground(new java.awt.Color(102, 0, 153));
+        Next.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        Next.setForeground(new java.awt.Color(255, 255, 255));
+        Next.setText("Next");
+        Next.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                NextMouseClicked(evt);
+            }
+        });
+        Next.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NextActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Next);
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 700, 220));
+
         setSize(new java.awt.Dimension(714, 508));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void NextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextActionPerformed
+        
+    }//GEN-LAST:event_NextActionPerformed
+
+    private void NextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NextMouseClicked
+        Dashboard Db = new Dashboard();
+        Db.setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_NextMouseClicked
 
     /**
      * @param args the command line arguments
@@ -94,9 +131,12 @@ public class Homepage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Next;
     private javax.swing.JLabel PwdEnterError;
     private javax.swing.JLabel UnameEnterError;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }
