@@ -159,7 +159,7 @@ public class Addfees extends javax.swing.JFrame {
         jLabel10.setText("GSTIN:  09IUW88J1Z7 ");
         jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, -1, -1));
 
-        jDateChooser1.setBackground(new java.awt.Color(255, 204, 102));
+        jDateChooser1.setBackground(new java.awt.Color(255, 255, 255));
         jDateChooser1.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
         jPanel3.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 30, 140, 20));
 
