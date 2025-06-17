@@ -19,20 +19,92 @@ public class Addfees extends javax.swing.JFrame {
      * Creates new form SignUpPage
      */
     
-    public void displayCashFirst()
+    public void displayCashZero()
     {
+        Cash_Label.setVisible(true);
+        Cash_fields.setVisible(true);
+        
         GooglePay_Label.setVisible(false);
+        GooglePay_field.setVisible(false);
+        
         PhonePe_Label.setVisible(false);
+        PhonePe_field.setVisible(false);
+        
         Cheque_Label.setVisible(false);
-        NEFT_Label.setVisible(false);
-        bankname__label.setVisible(false);
+        Cheque_field.setVisible(false);
+        
+        
+        bankname_label.setVisible(false);
         bank_name_field.setVisible(false);
+        
         
     }
     
+     public void displayGooglePayFirst()
+    {
+        Cash_Label.setVisible(false);
+        Cash_fields.setVisible(false);
+        
+        GooglePay_Label.setVisible(true);
+        GooglePay_field.setVisible(true);
+        
+        PhonePe_Label.setVisible(false);
+        PhonePe_field.setVisible(false);
+        
+        Cheque_Label.setVisible(false);
+        Cheque_field.setVisible(false);
+        
+        
+        bankname_label.setVisible(true);
+        bank_name_field.setVisible(true);
+        
+    }
+     
+     public void displayPhonepeSecond()
+     {
+        Cash_Label.setVisible(false);
+        Cash_fields.setVisible(false);
+        
+        GooglePay_Label.setVisible(false);
+        GooglePay_field.setVisible(false);
+        
+        PhonePe_Label.setVisible(true);
+        PhonePe_field.setVisible(true);
+        
+        Cheque_Label.setVisible(false);
+        Cheque_field.setVisible(false);
+        
+        
+        bankname_label.setVisible(true);
+        bank_name_field.setVisible(true);
+         
+     }
+     
+     
+     public void displayChequethird()
+     {
+        Cash_Label.setVisible(false);
+        Cash_fields.setVisible(false);
+        
+        GooglePay_Label.setVisible(false);
+        GooglePay_field.setVisible(false);
+        
+        PhonePe_Label.setVisible(false);
+        PhonePe_field.setVisible(false);
+        
+        Cheque_Label.setVisible(true);
+        Cheque_field.setVisible(true);
+        
+        
+        bankname_label.setVisible(true);
+        bank_name_field.setVisible(true);
+         
+     }
+     
+    
     public Addfees() {
         initComponents();
-        displayCashFirst();
+        displayCashZero();
     }
 
     /**
@@ -53,16 +125,18 @@ public class Addfees extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         date_label = new javax.swing.JLabel();
         payment_mode_label = new javax.swing.JLabel();
-        GooglePay_Label = new javax.swing.JLabel();
-        PhonePe_Label = new javax.swing.JLabel();
-        Cheque_Label = new javax.swing.JLabel();
-        NEFT_Label = new javax.swing.JLabel();
-        Gstin_label = new javax.swing.JLabel();
         Cash_Label = new javax.swing.JLabel();
+        Cash_fields = new javax.swing.JTextField();
+        GooglePay_Label = new javax.swing.JLabel();
+        GooglePay_field = new javax.swing.JTextField();
+        PhonePe_Label = new javax.swing.JLabel();
+        PhonePe_field = new javax.swing.JTextField();
+        Cheque_Label = new javax.swing.JLabel();
+        Cheque_field = new javax.swing.JTextField();
+        Gstin_label = new javax.swing.JLabel();
         DateChooser = new com.toedter.calendar.JDateChooser();
         Receipt_no_label = new javax.swing.JLabel();
         Receipt_no_field = new javax.swing.JTextField();
-        Mode_fields = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         Courses_dropdown = new javax.swing.JComboBox<>();
@@ -94,7 +168,7 @@ public class Addfees extends javax.swing.JFrame {
         Print_button = new javax.swing.JButton();
         Remark_field_panel = new javax.swing.JScrollPane();
         Remark_field = new javax.swing.JTextArea();
-        bankname__label = new javax.swing.JLabel();
+        bankname_label = new javax.swing.JLabel();
         payment_mode_dropdown = new javax.swing.JComboBox<>();
         bank_name_field = new javax.swing.JTextField();
         Home_button = new javax.swing.JButton();
@@ -114,8 +188,8 @@ public class Addfees extends javax.swing.JFrame {
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(new java.awt.Point(0, 0));
-        setMinimumSize(new java.awt.Dimension(700, 530));
-        setPreferredSize(new java.awt.Dimension(700, 600));
+        setMinimumSize(new java.awt.Dimension(700, 650));
+        setPreferredSize(new java.awt.Dimension(700, 650));
         setSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -139,10 +213,13 @@ public class Addfees extends javax.swing.JFrame {
         getContentPane().add(PwdEnterError, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 255));
-        jPanel2.setMinimumSize(new java.awt.Dimension(700, 430));
+        jPanel2.setMinimumSize(new java.awt.Dimension(700, 570));
+        jPanel2.setPreferredSize(new java.awt.Dimension(700, 570));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel3.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel3.setMinimumSize(new java.awt.Dimension(490, 570));
+        jPanel3.setPreferredSize(new java.awt.Dimension(490, 570));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         date_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
@@ -153,29 +230,57 @@ public class Addfees extends javax.swing.JFrame {
         payment_mode_label.setText("Mode of Payment:");
         jPanel3.add(payment_mode_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
 
+        Cash_Label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        Cash_Label.setText("Cash:");
+        jPanel3.add(Cash_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+
+        Cash_fields.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        Cash_fields.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cash_fieldsActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Cash_fields, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 90, -1));
+
         GooglePay_Label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        GooglePay_Label.setText("GooglePay");
+        GooglePay_Label.setText("GooglePay:");
         jPanel3.add(GooglePay_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
+        GooglePay_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        GooglePay_field.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GooglePay_fieldActionPerformed(evt);
+            }
+        });
+        jPanel3.add(GooglePay_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 90, -1));
+
         PhonePe_Label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        PhonePe_Label.setText("PhonePe");
+        PhonePe_Label.setText("PhonePe:");
         jPanel3.add(PhonePe_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
+        PhonePe_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        PhonePe_field.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PhonePe_fieldActionPerformed(evt);
+            }
+        });
+        jPanel3.add(PhonePe_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 90, -1));
+
         Cheque_Label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        Cheque_Label.setText("Cheque");
+        Cheque_Label.setText("Cheque No:");
         jPanel3.add(Cheque_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
-        NEFT_Label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        NEFT_Label.setText("NEFT");
-        jPanel3.add(NEFT_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+        Cheque_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        Cheque_field.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cheque_fieldActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Cheque_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 90, -1));
 
         Gstin_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         Gstin_label.setText("GSTIN:  09IUW88J1Z7 ");
         jPanel3.add(Gstin_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, -1, -1));
-
-        Cash_Label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        Cash_Label.setText("Cash");
-        jPanel3.add(Cash_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
         DateChooser.setBackground(new java.awt.Color(255, 255, 255));
         DateChooser.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
@@ -193,15 +298,8 @@ public class Addfees extends javax.swing.JFrame {
         });
         jPanel3.add(Receipt_no_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 90, -1));
 
-        Mode_fields.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        Mode_fields.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Mode_fieldsActionPerformed(evt);
-            }
-        });
-        jPanel3.add(Mode_fields, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 90, -1));
-
         jPanel4.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel4.setPreferredSize(new java.awt.Dimension(490, 370));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
@@ -367,17 +465,16 @@ public class Addfees extends javax.swing.JFrame {
 
         jPanel4.add(Remark_field_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, -1, -1));
 
-        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 490, 330));
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 490, -1));
 
-        bankname__label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        bankname__label.setText("Bank Name:");
-        jPanel3.add(bankname__label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
+        bankname_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        bankname_label.setText("Bank Name:");
+        jPanel3.add(bankname_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
         payment_mode_dropdown.setBackground(new java.awt.Color(0, 153, 0));
         payment_mode_dropdown.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
         payment_mode_dropdown.setForeground(new java.awt.Color(255, 255, 255));
-        payment_mode_dropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "GooglePay", "PhonePay", "Cheque", "NEFT", "Cash" }));
-        payment_mode_dropdown.setSelectedIndex(4);
+        payment_mode_dropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cash", "GooglePay", "PhonePe", "Cheque" }));
         payment_mode_dropdown.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 payment_mode_dropdownActionPerformed(evt);
@@ -393,7 +490,7 @@ public class Addfees extends javax.swing.JFrame {
         });
         jPanel3.add(bank_name_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 90, -1));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 490, 490));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 490, -1));
 
         Home_button.setBackground(new java.awt.Color(255, 51, 102));
         Home_button.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
@@ -477,7 +574,7 @@ public class Addfees extends javax.swing.JFrame {
         });
         jPanel2.add(logout_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 160, 30));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 700, 490));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 700, -1));
 
         setSize(new java.awt.Dimension(714, 588));
         setLocationRelativeTo(null);
@@ -527,9 +624,9 @@ public class Addfees extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Receipt_no_fieldActionPerformed
 
-    private void Mode_fieldsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mode_fieldsActionPerformed
+    private void Cash_fieldsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cash_fieldsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Mode_fieldsActionPerformed
+    }//GEN-LAST:event_Cash_fieldsActionPerformed
 
     private void bank_name_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bank_name_fieldActionPerformed
         // TODO add your handling code here:
@@ -572,8 +669,37 @@ public class Addfees extends javax.swing.JFrame {
     }//GEN-LAST:event_Print_buttonActionPerformed
 
     private void payment_mode_dropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payment_mode_dropdownActionPerformed
-        // TODO add your handling code here:
+       if(payment_mode_dropdown.getSelectedIndex() == 0)
+       {
+           displayCashZero();
+       }
+       if(payment_mode_dropdown.getSelectedIndex() == 1)
+       {
+           displayGooglePayFirst();
+       }
+       if(payment_mode_dropdown.getSelectedIndex() == 2)
+       {
+           displayPhonepeSecond();
+       }
+       if(payment_mode_dropdown.getSelectedIndex() == 3)
+       {
+           displayChequethird();
+       }
+       
+       
     }//GEN-LAST:event_payment_mode_dropdownActionPerformed
+
+    private void GooglePay_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GooglePay_fieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GooglePay_fieldActionPerformed
+
+    private void PhonePe_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PhonePe_fieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PhonePe_fieldActionPerformed
+
+    private void Cheque_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cheque_fieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Cheque_fieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -603,17 +729,19 @@ public class Addfees extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Amount_field;
     private javax.swing.JLabel Cash_Label;
+    private javax.swing.JTextField Cash_fields;
     private javax.swing.JTextField Cgst_field;
     private javax.swing.JLabel Cgst_label;
     private javax.swing.JLabel Cheque_Label;
+    private javax.swing.JTextField Cheque_field;
     private javax.swing.JComboBox<String> Courses_dropdown;
     private com.toedter.calendar.JDateChooser DateChooser;
     private javax.swing.JLabel GooglePay_Label;
+    private javax.swing.JTextField GooglePay_field;
     private javax.swing.JLabel Gstin_label;
     private javax.swing.JButton Home_button;
-    private javax.swing.JTextField Mode_fields;
-    private javax.swing.JLabel NEFT_Label;
     private javax.swing.JLabel PhonePe_Label;
+    private javax.swing.JTextField PhonePe_field;
     private javax.swing.JButton Print_button;
     private javax.swing.JLabel PwdEnterError;
     private javax.swing.JTextField Receipt_no_field;
@@ -635,7 +763,7 @@ public class Addfees extends javax.swing.JFrame {
     private javax.swing.JLabel amount_label;
     private javax.swing.JButton back_button;
     private javax.swing.JTextField bank_name_field;
-    private javax.swing.JLabel bankname__label;
+    private javax.swing.JLabel bankname_label;
     private javax.swing.JButton course_list_button;
     private javax.swing.JLabel courses_label;
     private javax.swing.JLabel date_label;
