@@ -19,15 +19,20 @@ public class Addfees extends javax.swing.JFrame {
      * Creates new form SignUpPage
      */
     
-    public void displayCashFisrt()
+    public void displayCashFirst()
     {
-        
+        GooglePay_Label.setVisible(false);
+        PhonePe_Label.setVisible(false);
+        Cheque_Label.setVisible(false);
+        NEFT_Label.setVisible(false);
+        bankname__label.setVisible(false);
+        bank_name_field.setVisible(false);
         
     }
     
     public Addfees() {
         initComponents();
-        displayCashFisrt();
+        displayCashFirst();
     }
 
     /**
@@ -86,11 +91,12 @@ public class Addfees extends javax.swing.JFrame {
         jSeparator4 = new javax.swing.JSeparator();
         Total_label = new javax.swing.JLabel();
         Totalwords_label = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
         Print_button = new javax.swing.JButton();
+        Remark_field_panel = new javax.swing.JScrollPane();
+        Remark_field = new javax.swing.JTextArea();
         bankname__label = new javax.swing.JLabel();
         payment_mode_dropdown = new javax.swing.JComboBox<>();
-        bank_name_label = new javax.swing.JTextField();
+        bank_name_field = new javax.swing.JTextField();
         Home_button = new javax.swing.JButton();
         Search_button = new javax.swing.JButton();
         edit_course_button = new javax.swing.JButton();
@@ -343,7 +349,6 @@ public class Addfees extends javax.swing.JFrame {
         Totalwords_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         Totalwords_label.setText("Total in Words:");
         jPanel4.add(Totalwords_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 110, 20));
-        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 210, 80));
 
         Print_button.setBackground(new java.awt.Color(255, 0, 51));
         Print_button.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
@@ -355,6 +360,12 @@ public class Addfees extends javax.swing.JFrame {
             }
         });
         jPanel4.add(Print_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, -1, -1));
+
+        Remark_field.setColumns(20);
+        Remark_field.setRows(5);
+        Remark_field_panel.setViewportView(Remark_field);
+
+        jPanel4.add(Remark_field_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, -1, -1));
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 490, 330));
 
@@ -374,13 +385,13 @@ public class Addfees extends javax.swing.JFrame {
         });
         jPanel3.add(payment_mode_dropdown, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, -1, -1));
 
-        bank_name_label.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        bank_name_label.addActionListener(new java.awt.event.ActionListener() {
+        bank_name_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        bank_name_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bank_name_labelActionPerformed(evt);
+                bank_name_fieldActionPerformed(evt);
             }
         });
-        jPanel3.add(bank_name_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 90, -1));
+        jPanel3.add(bank_name_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 90, -1));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 490, 490));
 
@@ -520,9 +531,9 @@ public class Addfees extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Mode_fieldsActionPerformed
 
-    private void bank_name_labelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bank_name_labelActionPerformed
+    private void bank_name_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bank_name_fieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bank_name_labelActionPerformed
+    }//GEN-LAST:event_bank_name_fieldActionPerformed
 
     private void received_month_field_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_received_month_field_1ActionPerformed
         // TODO add your handling code here:
@@ -607,6 +618,8 @@ public class Addfees extends javax.swing.JFrame {
     private javax.swing.JLabel PwdEnterError;
     private javax.swing.JTextField Receipt_no_field;
     private javax.swing.JLabel Receipt_no_label;
+    private javax.swing.JTextArea Remark_field;
+    private javax.swing.JScrollPane Remark_field_panel;
     private javax.swing.JLabel Remark_label;
     private javax.swing.JTextField Rollno_field;
     private javax.swing.JButton Search_button;
@@ -621,7 +634,7 @@ public class Addfees extends javax.swing.JFrame {
     private javax.swing.JButton all_record_button;
     private javax.swing.JLabel amount_label;
     private javax.swing.JButton back_button;
-    private javax.swing.JTextField bank_name_label;
+    private javax.swing.JTextField bank_name_field;
     private javax.swing.JLabel bankname__label;
     private javax.swing.JButton course_list_button;
     private javax.swing.JLabel courses_label;
@@ -637,7 +650,6 @@ public class Addfees extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
