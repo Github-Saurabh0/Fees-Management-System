@@ -45,6 +45,7 @@ public class Addfees extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel12 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
@@ -158,6 +159,10 @@ public class Addfees extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel10.setText("GSTIN:  09IUW88J1Z7 ");
         jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, -1, -1));
+
+        jLabel26.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        jLabel26.setText("Cash");
+        jPanel3.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
         jDateChooser1.setBackground(new java.awt.Color(255, 255, 255));
         jDateChooser1.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
@@ -359,7 +364,7 @@ public class Addfees extends javax.swing.JFrame {
         jComboBox2.setBackground(new java.awt.Color(0, 153, 0));
         jComboBox2.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
         jComboBox2.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "GooglePay", "PhonePay", "Cheque", "NEFT" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "GooglePay", "PhonePay", "Cheque", "NEFT", "Cash" }));
         jPanel3.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, -1, -1));
 
         jTextField4.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
@@ -605,6 +610,7 @@ public class Addfees extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
