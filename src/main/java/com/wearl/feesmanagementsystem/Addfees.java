@@ -18,8 +18,16 @@ public class Addfees extends javax.swing.JFrame {
     /**
      * Creates new form SignUpPage
      */
+    
+    public void displayCashFisrt()
+    {
+        
+        
+    }
+    
     public Addfees() {
         initComponents();
+        displayCashFisrt();
     }
 
     /**
@@ -38,59 +46,58 @@ public class Addfees extends javax.swing.JFrame {
         PwdEnterError = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        date_label = new javax.swing.JLabel();
+        payment_mode_label = new javax.swing.JLabel();
+        GooglePay_Label = new javax.swing.JLabel();
+        PhonePe_Label = new javax.swing.JLabel();
+        Cheque_Label = new javax.swing.JLabel();
+        NEFT_Label = new javax.swing.JLabel();
+        Gstin_label = new javax.swing.JLabel();
+        Cash_Label = new javax.swing.JLabel();
+        DateChooser = new com.toedter.calendar.JDateChooser();
+        Receipt_no_label = new javax.swing.JLabel();
+        Receipt_no_field = new javax.swing.JTextField();
+        Mode_fields = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel14 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        Courses_dropdown = new javax.swing.JComboBox<>();
+        Remark_label = new javax.swing.JLabel();
+        Total_in_words_field = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        received_month_field_1 = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jLabel20 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        jLabel21 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
+        courses_label = new javax.swing.JLabel();
+        sr_no_label = new javax.swing.JLabel();
+        head__label = new javax.swing.JLabel();
+        amount_label = new javax.swing.JLabel();
+        received_month_field_2 = new javax.swing.JTextField();
+        Rollno_field = new javax.swing.JTextField();
+        Amount_field = new javax.swing.JTextField();
+        rollno_label = new javax.swing.JLabel();
+        first_amount = new javax.swing.JTextField();
+        Cgst_label = new javax.swing.JLabel();
+        Cgst_field = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
-        jLabel22 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        jLabel23 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
+        Sgst_label = new javax.swing.JLabel();
+        Sgst_field = new javax.swing.JTextField();
+        Signature_label = new javax.swing.JLabel();
+        Total_amount_field = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
+        Total_label = new javax.swing.JLabel();
+        Totalwords_label = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-        jLabel13 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jTextField4 = new javax.swing.JTextField();
-        Home = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        Print_button = new javax.swing.JButton();
+        bankname__label = new javax.swing.JLabel();
+        payment_mode_dropdown = new javax.swing.JComboBox<>();
+        bank_name_label = new javax.swing.JTextField();
+        Home_button = new javax.swing.JButton();
+        Search_button = new javax.swing.JButton();
+        edit_course_button = new javax.swing.JButton();
+        course_list_button = new javax.swing.JButton();
+        all_record_button = new javax.swing.JButton();
+        back_button = new javax.swing.JButton();
+        logout_button = new javax.swing.JButton();
 
         jLabel2.setText("jLabel2");
 
@@ -132,61 +139,61 @@ public class Addfees extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(204, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel4.setText("Date:");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, -1, -1));
+        date_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        date_label.setText("Date:");
+        jPanel3.add(date_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel5.setText("Mode of Payment:");
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
+        payment_mode_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        payment_mode_label.setText("Mode of Payment:");
+        jPanel3.add(payment_mode_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
 
-        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel6.setText("GooglePay");
-        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+        GooglePay_Label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        GooglePay_Label.setText("GooglePay");
+        jPanel3.add(GooglePay_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel7.setText("PhonePe");
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+        PhonePe_Label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        PhonePe_Label.setText("PhonePe");
+        jPanel3.add(PhonePe_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel8.setText("Cheque");
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+        Cheque_Label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        Cheque_Label.setText("Cheque");
+        jPanel3.add(Cheque_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
-        jLabel9.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel9.setText("NEFT");
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+        NEFT_Label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        NEFT_Label.setText("NEFT");
+        jPanel3.add(NEFT_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
-        jLabel10.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel10.setText("GSTIN:  09IUW88J1Z7 ");
-        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, -1, -1));
+        Gstin_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        Gstin_label.setText("GSTIN:  09IUW88J1Z7 ");
+        jPanel3.add(Gstin_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, -1, -1));
 
-        jLabel26.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel26.setText("Cash");
-        jPanel3.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+        Cash_Label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        Cash_Label.setText("Cash");
+        jPanel3.add(Cash_Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
-        jDateChooser1.setBackground(new java.awt.Color(255, 255, 255));
-        jDateChooser1.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        jPanel3.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 30, 140, 20));
+        DateChooser.setBackground(new java.awt.Color(255, 255, 255));
+        DateChooser.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        jPanel3.add(DateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 30, 140, 20));
 
-        jLabel12.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel12.setText("Receipt No. ");
-        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+        Receipt_no_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        Receipt_no_label.setText("Receipt No. ");
+        jPanel3.add(Receipt_no_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
-        jTextField2.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        Receipt_no_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        Receipt_no_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                Receipt_no_fieldActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 90, -1));
+        jPanel3.add(Receipt_no_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 90, -1));
 
-        jTextField3.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        Mode_fields.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        Mode_fields.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                Mode_fieldsActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 90, -1));
+        jPanel3.add(Mode_fields, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 90, -1));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 204));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -195,35 +202,35 @@ public class Addfees extends javax.swing.JFrame {
         jLabel11.setText("to");
         jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, 20, 20));
 
-        jComboBox1.setBackground(new java.awt.Color(255, 204, 0));
-        jComboBox1.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
-        jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Java Adv", "C++", "Dart", "Mern stack" }));
-        jPanel4.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, -1, -1));
+        Courses_dropdown.setBackground(new java.awt.Color(255, 204, 0));
+        Courses_dropdown.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        Courses_dropdown.setForeground(new java.awt.Color(255, 255, 255));
+        Courses_dropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Java Adv", "C++", "Dart", "Mern stack" }));
+        jPanel4.add(Courses_dropdown, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, -1, -1));
 
-        jLabel14.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel14.setText("Remark: ");
-        jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 110, 20));
+        Remark_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        Remark_label.setText("Remark: ");
+        jPanel4.add(Remark_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 70, 20));
 
-        jTextField1.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Total_in_words_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        Total_in_words_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                Total_in_words_fieldActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 130, -1));
+        jPanel4.add(Total_in_words_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 130, -1));
 
         jLabel15.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel15.setText("Received from for the given month ");
         jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 20));
 
-        jTextField5.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        received_month_field_1.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        received_month_field_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                received_month_field_1ActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 70, -1));
+        jPanel4.add(received_month_field_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 70, -1));
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 51));
         jSeparator1.setForeground(new java.awt.Color(51, 0, 51));
@@ -233,231 +240,231 @@ public class Addfees extends javax.swing.JFrame {
         jSeparator2.setForeground(new java.awt.Color(51, 0, 51));
         jPanel4.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 267, 130, -1));
 
-        jLabel16.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel16.setText("Course:");
-        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, 20));
+        courses_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        courses_label.setText("Course:");
+        jPanel4.add(courses_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, 20));
 
-        jLabel17.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel17.setText("Sr No.");
-        jPanel4.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, 30));
+        sr_no_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        sr_no_label.setText("Sr No.");
+        jPanel4.add(sr_no_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, 30));
 
-        jLabel18.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel18.setText("Head");
-        jPanel4.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, -1, 30));
+        head__label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        head__label.setText("Head");
+        jPanel4.add(head__label, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, -1, 30));
 
-        jLabel19.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel19.setText("Amount");
-        jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, -1, 30));
+        amount_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        amount_label.setText("Amount");
+        jPanel4.add(amount_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, -1, 30));
 
-        jTextField6.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        received_month_field_2.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        received_month_field_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                received_month_field_2ActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 70, -1));
+        jPanel4.add(received_month_field_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 70, -1));
 
-        jTextField7.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        Rollno_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        Rollno_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                Rollno_fieldActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 70, -1));
+        jPanel4.add(Rollno_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 70, -1));
 
-        jTextField8.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        Amount_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        Amount_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                Amount_fieldActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 160, -1));
+        jPanel4.add(Amount_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 160, -1));
 
-        jLabel20.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel20.setText("Roll No: ");
-        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, -1, 20));
+        rollno_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        rollno_label.setText("Roll No: ");
+        jPanel4.add(rollno_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, -1, 20));
 
-        jTextField9.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        first_amount.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        first_amount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                first_amountActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 80, -1));
+        jPanel4.add(first_amount, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 80, -1));
 
-        jLabel21.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel21.setText("CGST 7%");
-        jPanel4.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, -1, 20));
+        Cgst_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        Cgst_label.setText("CGST 7%");
+        jPanel4.add(Cgst_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, -1, 20));
 
-        jTextField10.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+        Cgst_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        Cgst_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
+                Cgst_fieldActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 80, -1));
+        jPanel4.add(Cgst_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 80, -1));
 
         jSeparator3.setBackground(new java.awt.Color(0, 0, 51));
         jSeparator3.setForeground(new java.awt.Color(51, 0, 51));
         jPanel4.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 490, 20));
 
-        jLabel22.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel22.setText("SGST 6%");
-        jPanel4.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, -1, 20));
+        Sgst_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        Sgst_label.setText("SGST 6%");
+        jPanel4.add(Sgst_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, -1, 20));
 
-        jTextField11.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+        Sgst_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        Sgst_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+                Sgst_fieldActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 80, -1));
+        jPanel4.add(Sgst_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 80, -1));
 
-        jLabel23.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel23.setText("Signature");
-        jPanel4.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, -1, 20));
+        Signature_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        Signature_label.setText("Signature");
+        jPanel4.add(Signature_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, -1, 20));
 
-        jTextField12.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+        Total_amount_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        Total_amount_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField12ActionPerformed(evt);
+                Total_amount_fieldActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 80, -1));
+        jPanel4.add(Total_amount_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 80, -1));
 
         jSeparator4.setBackground(new java.awt.Color(0, 0, 51));
         jSeparator4.setForeground(new java.awt.Color(51, 0, 51));
         jPanel4.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 490, 10));
 
-        jLabel24.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel24.setText("Total");
-        jPanel4.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, -1, 20));
+        Total_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        Total_label.setText("Total");
+        jPanel4.add(Total_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, -1, 20));
 
-        jLabel25.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel25.setText("Total in Words:");
-        jPanel4.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 110, 20));
-
-        jTextArea1.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        jTextArea1.setRows(3);
-        jTextArea1.setTabSize(6);
-        jScrollPane1.setViewportView(jTextArea1);
-
+        Totalwords_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        Totalwords_label.setText("Total in Words:");
+        jPanel4.add(Totalwords_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 110, 20));
         jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 210, 80));
 
-        jButton1.setBackground(new java.awt.Color(255, 0, 51));
-        jButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Print");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Print_button.setBackground(new java.awt.Color(255, 0, 51));
+        Print_button.setFont(new java.awt.Font("Trebuchet MS", 1, 13)); // NOI18N
+        Print_button.setForeground(new java.awt.Color(255, 255, 255));
+        Print_button.setText("Print");
+        Print_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                Print_buttonActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, -1, -1));
+        jPanel4.add(Print_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, -1, -1));
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 490, 330));
 
-        jLabel13.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel13.setText("Bank Name:");
-        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
+        bankname__label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        bankname__label.setText("Bank Name:");
+        jPanel3.add(bankname__label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
-        jComboBox2.setBackground(new java.awt.Color(0, 153, 0));
-        jComboBox2.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
-        jComboBox2.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "GooglePay", "PhonePay", "Cheque", "NEFT", "Cash" }));
-        jPanel3.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, -1, -1));
-
-        jTextField4.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        payment_mode_dropdown.setBackground(new java.awt.Color(0, 153, 0));
+        payment_mode_dropdown.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        payment_mode_dropdown.setForeground(new java.awt.Color(255, 255, 255));
+        payment_mode_dropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "GooglePay", "PhonePay", "Cheque", "NEFT", "Cash" }));
+        payment_mode_dropdown.setSelectedIndex(4);
+        payment_mode_dropdown.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                payment_mode_dropdownActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 90, -1));
+        jPanel3.add(payment_mode_dropdown, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, -1, -1));
+
+        bank_name_label.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        bank_name_label.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bank_name_labelActionPerformed(evt);
+            }
+        });
+        jPanel3.add(bank_name_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 90, -1));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 490, 490));
 
-        Home.setBackground(new java.awt.Color(255, 51, 102));
-        Home.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        Home.setForeground(new java.awt.Color(255, 255, 255));
-        Home.setText("Home");
-        Home.addMouseListener(new java.awt.event.MouseAdapter() {
+        Home_button.setBackground(new java.awt.Color(255, 51, 102));
+        Home_button.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        Home_button.setForeground(new java.awt.Color(255, 255, 255));
+        Home_button.setText("Home");
+        Home_button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                HomeMouseClicked(evt);
+                Home_buttonMouseClicked(evt);
             }
         });
-        Home.addActionListener(new java.awt.event.ActionListener() {
+        Home_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HomeActionPerformed(evt);
+                Home_buttonActionPerformed(evt);
             }
         });
-        jPanel2.add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 160, 30));
+        jPanel2.add(Home_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 160, 30));
 
-        jButton3.setBackground(new java.awt.Color(255, 51, 102));
-        jButton3.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Search record");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        Search_button.setBackground(new java.awt.Color(255, 51, 102));
+        Search_button.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        Search_button.setForeground(new java.awt.Color(255, 255, 255));
+        Search_button.setText("Search record");
+        Search_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                Search_buttonActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 160, 30));
+        jPanel2.add(Search_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 160, 30));
 
-        jButton4.setBackground(new java.awt.Color(255, 51, 102));
-        jButton4.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Edit Course");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        edit_course_button.setBackground(new java.awt.Color(255, 51, 102));
+        edit_course_button.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        edit_course_button.setForeground(new java.awt.Color(255, 255, 255));
+        edit_course_button.setText("Edit Course");
+        edit_course_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                edit_course_buttonActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 160, 30));
+        jPanel2.add(edit_course_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 160, 30));
 
-        jButton5.setBackground(new java.awt.Color(255, 51, 102));
-        jButton5.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Course List");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        course_list_button.setBackground(new java.awt.Color(255, 51, 102));
+        course_list_button.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        course_list_button.setForeground(new java.awt.Color(255, 255, 255));
+        course_list_button.setText("Course List");
+        course_list_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                course_list_buttonActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 160, 30));
+        jPanel2.add(course_list_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 160, 30));
 
-        jButton6.setBackground(new java.awt.Color(255, 51, 102));
-        jButton6.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("View All Records");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        all_record_button.setBackground(new java.awt.Color(255, 51, 102));
+        all_record_button.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        all_record_button.setForeground(new java.awt.Color(255, 255, 255));
+        all_record_button.setText("View All Records");
+        all_record_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                all_record_buttonActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 160, 30));
+        jPanel2.add(all_record_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 160, 30));
 
-        jButton7.setBackground(new java.awt.Color(255, 51, 102));
-        jButton7.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("Back");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        back_button.setBackground(new java.awt.Color(255, 51, 102));
+        back_button.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        back_button.setForeground(new java.awt.Color(255, 255, 255));
+        back_button.setText("Back");
+        back_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                back_buttonActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 160, 30));
+        jPanel2.add(back_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 160, 30));
 
-        jButton8.setBackground(new java.awt.Color(255, 51, 102));
-        jButton8.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setText("Logout");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        logout_button.setBackground(new java.awt.Color(255, 51, 102));
+        logout_button.setFont(new java.awt.Font("Trebuchet MS", 1, 16)); // NOI18N
+        logout_button.setForeground(new java.awt.Color(255, 255, 255));
+        logout_button.setText("Logout");
+        logout_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                logout_buttonActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 160, 30));
+        jPanel2.add(logout_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 160, 30));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 700, 490));
 
@@ -465,93 +472,97 @@ public class Addfees extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void HomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeActionPerformed
+    private void Home_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Home_buttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_HomeActionPerformed
+    }//GEN-LAST:event_Home_buttonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void Search_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Search_buttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_Search_buttonActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void edit_course_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edit_course_buttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_edit_course_buttonActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void course_list_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_course_list_buttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_course_list_buttonActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void all_record_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_all_record_buttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_all_record_buttonActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void back_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_buttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_back_buttonActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void logout_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logout_buttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_logout_buttonActionPerformed
 
-    private void HomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeMouseClicked
+    private void Home_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Home_buttonMouseClicked
 
         Dashboard Db = new Dashboard();
         Db.setVisible(true);
         this.dispose();
         
-    }//GEN-LAST:event_HomeMouseClicked
+    }//GEN-LAST:event_Home_buttonMouseClicked
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void Total_in_words_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Total_in_words_fieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_Total_in_words_fieldActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void Receipt_no_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Receipt_no_fieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_Receipt_no_fieldActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void Mode_fieldsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mode_fieldsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_Mode_fieldsActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void bank_name_labelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bank_name_labelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_bank_name_labelActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void received_month_field_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_received_month_field_1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_received_month_field_1ActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void received_month_field_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_received_month_field_2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_received_month_field_2ActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void Rollno_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Rollno_fieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_Rollno_fieldActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void Amount_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Amount_fieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_Amount_fieldActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void first_amountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_first_amountActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_first_amountActionPerformed
 
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+    private void Cgst_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cgst_fieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
+    }//GEN-LAST:event_Cgst_fieldActionPerformed
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+    private void Sgst_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sgst_fieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    }//GEN-LAST:event_Sgst_fieldActionPerformed
 
-    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+    private void Total_amount_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Total_amount_fieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField12ActionPerformed
+    }//GEN-LAST:event_Total_amount_fieldActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void Print_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_buttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_Print_buttonActionPerformed
+
+    private void payment_mode_dropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payment_mode_dropdownActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_payment_mode_dropdownActionPerformed
 
     /**
      * @param args the command line arguments
@@ -579,44 +590,49 @@ public class Addfees extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Home;
+    private javax.swing.JTextField Amount_field;
+    private javax.swing.JLabel Cash_Label;
+    private javax.swing.JTextField Cgst_field;
+    private javax.swing.JLabel Cgst_label;
+    private javax.swing.JLabel Cheque_Label;
+    private javax.swing.JComboBox<String> Courses_dropdown;
+    private com.toedter.calendar.JDateChooser DateChooser;
+    private javax.swing.JLabel GooglePay_Label;
+    private javax.swing.JLabel Gstin_label;
+    private javax.swing.JButton Home_button;
+    private javax.swing.JTextField Mode_fields;
+    private javax.swing.JLabel NEFT_Label;
+    private javax.swing.JLabel PhonePe_Label;
+    private javax.swing.JButton Print_button;
     private javax.swing.JLabel PwdEnterError;
+    private javax.swing.JTextField Receipt_no_field;
+    private javax.swing.JLabel Receipt_no_label;
+    private javax.swing.JLabel Remark_label;
+    private javax.swing.JTextField Rollno_field;
+    private javax.swing.JButton Search_button;
+    private javax.swing.JTextField Sgst_field;
+    private javax.swing.JLabel Sgst_label;
+    private javax.swing.JLabel Signature_label;
+    private javax.swing.JTextField Total_amount_field;
+    private javax.swing.JTextField Total_in_words_field;
+    private javax.swing.JLabel Total_label;
+    private javax.swing.JLabel Totalwords_label;
     private javax.swing.JLabel UnameEnterError;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private javax.swing.JButton all_record_button;
+    private javax.swing.JLabel amount_label;
+    private javax.swing.JButton back_button;
+    private javax.swing.JTextField bank_name_label;
+    private javax.swing.JLabel bankname__label;
+    private javax.swing.JButton course_list_button;
+    private javax.swing.JLabel courses_label;
+    private javax.swing.JLabel date_label;
+    private javax.swing.JButton edit_course_button;
+    private javax.swing.JTextField first_amount;
+    private javax.swing.JLabel head__label;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -626,18 +642,12 @@ public class Addfees extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JButton logout_button;
+    private javax.swing.JComboBox<String> payment_mode_dropdown;
+    private javax.swing.JLabel payment_mode_label;
+    private javax.swing.JTextField received_month_field_1;
+    private javax.swing.JTextField received_month_field_2;
+    private javax.swing.JLabel rollno_label;
+    private javax.swing.JLabel sr_no_label;
     // End of variables declaration//GEN-END:variables
 }
