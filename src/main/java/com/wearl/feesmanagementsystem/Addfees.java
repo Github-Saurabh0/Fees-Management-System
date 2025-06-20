@@ -30,8 +30,10 @@ public class Addfees extends javax.swing.JFrame {
         Cheque_Label.setVisible(false);
         Cheque_field.setVisible(false);
 
-        Receiver_label.setVisible(false);
-        receiver_field.setVisible(false);
+        bankname_label.setVisible(false);
+        bank_name_field.setVisible(false);
+        
+        
 
     }
 
@@ -48,8 +50,8 @@ public class Addfees extends javax.swing.JFrame {
         Cheque_Label.setVisible(false);
         Cheque_field.setVisible(false);
 
-        Receiver_label.setVisible(true);
-        receiver_field.setVisible(true);
+        bankname_label.setVisible(true);
+        bank_name_field.setVisible(true);
 
     }
 
@@ -66,8 +68,8 @@ public class Addfees extends javax.swing.JFrame {
         Cheque_Label.setVisible(false);
         Cheque_field.setVisible(false);
 
-        Receiver_label.setVisible(true);
-        receiver_field.setVisible(true);
+        bankname_label.setVisible(true);
+        bank_name_field.setVisible(true);
 
     }
 
@@ -84,8 +86,8 @@ public class Addfees extends javax.swing.JFrame {
         Cheque_Label.setVisible(true);
         Cheque_field.setVisible(true);
 
-        Receiver_label.setVisible(true);
-        receiver_field.setVisible(true);
+        bankname_label.setVisible(true);
+        bank_name_field.setVisible(true);
 
     }
 
@@ -96,7 +98,7 @@ public class Addfees extends javax.swing.JFrame {
 
     boolean Validation() {
 
-        if (Receipt_no_field.getText().equals("")) {
+        if(Receipt_no_field.getText().trim().isEmpty() || !Receipt_no_field.getText().matches("\\d+")){
             JOptionPane.showMessageDialog(this, "Please Enter Receipt No");
             return false;
         }
@@ -113,11 +115,6 @@ public class Addfees extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Please Enter Cash Details");
             return false;
             }
-            if(receiver_field.getText().equals(""))
-            {
-            JOptionPane.showMessageDialog(this, "Please Enter Bank Details");
-            return false;
-            }
         }
 
 
@@ -128,7 +125,7 @@ public class Addfees extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Please Enter GooglePay Details");
             return false;
             }
-            if(receiver_field.getText().equals(""))
+            if(bank_name_field.getText().equals(""))
             {
             JOptionPane.showMessageDialog(this, "Please Enter Bank Details");
             return false;
@@ -142,7 +139,7 @@ public class Addfees extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Please Enter PhonePe Details");
             return false;
             }
-            if(receiver_field.getText().equals(""))
+            if(bank_name_field.getText().equals(""))
             {
             JOptionPane.showMessageDialog(this, "Please Enter Bank Details");
             return false;
@@ -156,7 +153,7 @@ public class Addfees extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Please Enter Cheque Details");
             return false;
            }
-           if(receiver_field.getText().equals(""))
+           if(bank_name_field.getText().equals(""))
             {
             JOptionPane.showMessageDialog(this, "Please Enter Bank Details");
             return false;
@@ -169,13 +166,13 @@ public class Addfees extends javax.swing.JFrame {
         }
         
         
-        if (Rollno_field.getText().equals("")) {
+        if(Rollno_field.getText().trim().isEmpty() || !Rollno_field.getText().matches("\\d+")){
             JOptionPane.showMessageDialog(this, "Please Enter Roll No.");
             return false;
         }
 
         if (Amount_field.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "Please Enter Amount Details");
+            JOptionPane.showMessageDialog(this, "Please Enter Head Amount Details");
             return false;
         }
 
@@ -276,8 +273,8 @@ public class Addfees extends javax.swing.JFrame {
         Receiver_label = new javax.swing.JLabel();
         receiver_field = new javax.swing.JTextField();
         payment_mode_dropdown = new javax.swing.JComboBox<>();
-        bankname_label1 = new javax.swing.JLabel();
-        bank_name_field1 = new javax.swing.JTextField();
+        bankname_label = new javax.swing.JLabel();
+        bank_name_field = new javax.swing.JTextField();
         Home_button = new javax.swing.JButton();
         Search_button = new javax.swing.JButton();
         edit_course_button = new javax.swing.JButton();
@@ -594,17 +591,17 @@ public class Addfees extends javax.swing.JFrame {
         });
         jPanel3.add(payment_mode_dropdown, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, -1, -1));
 
-        bankname_label1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        bankname_label1.setText("Bank Name:");
-        jPanel3.add(bankname_label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
+        bankname_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        bankname_label.setText("Bank Name:");
+        jPanel3.add(bankname_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
-        bank_name_field1.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        bank_name_field1.addActionListener(new java.awt.event.ActionListener() {
+        bank_name_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        bank_name_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bank_name_field1ActionPerformed(evt);
+                bank_name_fieldActionPerformed(evt);
             }
         });
-        jPanel3.add(bank_name_field1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 90, -1));
+        jPanel3.add(bank_name_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 90, -1));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 490, -1));
 
@@ -744,9 +741,9 @@ public class Addfees extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Cash_fieldsActionPerformed
 
-    private void receiver_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_receiver_fieldActionPerformed
+    private void bank_name_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bank_name_fieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_receiver_fieldActionPerformed
+    }//GEN-LAST:event_bank_name_fieldActionPerformed
 
     private void Rollno_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Rollno_fieldActionPerformed
         // TODO add your handling code here:
@@ -805,9 +802,9 @@ public class Addfees extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Cheque_fieldActionPerformed
 
-    private void bank_name_field1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bank_name_field1ActionPerformed
+    private void receiver_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_receiver_fieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bank_name_field1ActionPerformed
+    }//GEN-LAST:event_receiver_fieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -871,8 +868,8 @@ public class Addfees extends javax.swing.JFrame {
     private javax.swing.JButton all_record_button;
     private javax.swing.JLabel amount_label;
     private javax.swing.JButton back_button;
-    private javax.swing.JTextField bank_name_field1;
-    private javax.swing.JLabel bankname_label1;
+    private javax.swing.JTextField bank_name_field;
+    private javax.swing.JLabel bankname_label;
     private javax.swing.JButton course_list_button;
     private javax.swing.JLabel courses_label;
     private javax.swing.JLabel date_label;
