@@ -117,6 +117,7 @@ public class Addfees extends javax.swing.JFrame {
             }
         }
 
+        
 
         if(payment_mode_dropdown.getSelectedItem().toString().equalsIgnoreCase("GooglePay"))
         {
@@ -268,7 +269,7 @@ public class Addfees extends javax.swing.JFrame {
         Print_button = new javax.swing.JButton();
         Remark_field_panel = new javax.swing.JScrollPane();
         Remark_field = new javax.swing.JTextArea();
-        Courses_dropdown1 = new javax.swing.JComboBox<>();
+        Courses_dropdown = new javax.swing.JComboBox<>();
         received_month_field_1 = new javax.swing.JComboBox<>();
         Receiver_label = new javax.swing.JLabel();
         receiver_field = new javax.swing.JTextField();
@@ -343,7 +344,7 @@ public class Addfees extends javax.swing.JFrame {
                 Cash_fieldsActionPerformed(evt);
             }
         });
-        jPanel3.add(Cash_fields, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 90, -1));
+        jPanel3.add(Cash_fields, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 90, 22));
 
         GooglePay_Label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         GooglePay_Label.setText("GooglePay:");
@@ -420,15 +421,13 @@ public class Addfees extends javax.swing.JFrame {
         Remark_label.setText("Remark: ");
         jPanel4.add(Remark_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 70, 20));
 
-        Total_in_words_field.setEditable(false);
-        Total_in_words_field.setBackground(new java.awt.Color(255, 255, 255));
         Total_in_words_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
         Total_in_words_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Total_in_words_fieldActionPerformed(evt);
             }
         });
-        jPanel4.add(Total_in_words_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 130, -1));
+        jPanel4.add(Total_in_words_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 130, 22));
 
         jLabel15.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel15.setText("Received from for the given month ");
@@ -472,7 +471,8 @@ public class Addfees extends javax.swing.JFrame {
                 Amount_fieldActionPerformed(evt);
             }
         });
-        jPanel4.add(Amount_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 160, -1));
+        jPanel4.add(Amount_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 160, 23));
+        Amount_field.getAccessibleContext().setAccessibleDescription("");
 
         rollno_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         rollno_label.setText("Roll No: ");
@@ -484,60 +484,64 @@ public class Addfees extends javax.swing.JFrame {
                 first_amountActionPerformed(evt);
             }
         });
-        jPanel4.add(first_amount, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 80, -1));
+        first_amount.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                first_amountKeyTyped(evt);
+            }
+        });
+        jPanel4.add(first_amount, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 80, 23));
+        first_amount.getAccessibleContext().setAccessibleName("");
 
         Cgst_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         Cgst_label.setText("CGST 7%");
         jPanel4.add(Cgst_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, -1, 20));
 
-        Cgst_field.setEditable(false);
-        Cgst_field.setBackground(new java.awt.Color(255, 255, 255));
         Cgst_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        Cgst_field.setForeground(new java.awt.Color(0, 153, 102));
         Cgst_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cgst_fieldActionPerformed(evt);
             }
         });
-        jPanel4.add(Cgst_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 80, -1));
+        jPanel4.add(Cgst_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 80, 23));
 
         jSeparator3.setBackground(new java.awt.Color(0, 0, 51));
         jSeparator3.setForeground(new java.awt.Color(51, 0, 51));
-        jPanel4.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 490, 20));
+        jPanel4.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 490, 10));
 
         Sgst_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         Sgst_label.setText("SGST 6%");
         jPanel4.add(Sgst_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, -1, 20));
 
-        Sgst_field.setEditable(false);
-        Sgst_field.setBackground(new java.awt.Color(255, 255, 255));
         Sgst_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        Sgst_field.setForeground(new java.awt.Color(0, 153, 102));
         Sgst_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Sgst_fieldActionPerformed(evt);
             }
         });
-        jPanel4.add(Sgst_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 80, -1));
+        jPanel4.add(Sgst_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 80, 23));
+        Sgst_field.getAccessibleContext().setAccessibleDescription("");
 
         Signature_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         Signature_label.setText("Signature");
         jPanel4.add(Signature_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, -1, 20));
 
-        Total_amount_field.setEditable(false);
-        Total_amount_field.setBackground(new java.awt.Color(255, 255, 255));
         Total_amount_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        Total_amount_field.setForeground(new java.awt.Color(0, 153, 102));
         Total_amount_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Total_amount_fieldActionPerformed(evt);
             }
         });
-        jPanel4.add(Total_amount_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 80, -1));
+        jPanel4.add(Total_amount_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 80, 23));
 
         jSeparator4.setBackground(new java.awt.Color(0, 0, 51));
         jSeparator4.setForeground(new java.awt.Color(51, 0, 51));
         jPanel4.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 490, 10));
 
         Total_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        Total_label.setText("Total");
+        Total_label.setText("Total:");
         jPanel4.add(Total_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, -1, 20));
 
         Totalwords_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
@@ -561,11 +565,11 @@ public class Addfees extends javax.swing.JFrame {
 
         jPanel4.add(Remark_field_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, -1, -1));
 
-        Courses_dropdown1.setBackground(new java.awt.Color(255, 204, 0));
-        Courses_dropdown1.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
-        Courses_dropdown1.setForeground(new java.awt.Color(255, 255, 236));
-        Courses_dropdown1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Java Adv", "C++", "Dart", "Mern stack" }));
-        jPanel4.add(Courses_dropdown1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, -1, -1));
+        Courses_dropdown.setBackground(new java.awt.Color(255, 204, 0));
+        Courses_dropdown.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        Courses_dropdown.setForeground(new java.awt.Color(255, 255, 236));
+        Courses_dropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Java Adv", "C++", "Dart", "Mern stack" }));
+        jPanel4.add(Courses_dropdown, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, -1, -1));
 
         received_month_field_1.setBackground(new java.awt.Color(255, 204, 0));
         received_month_field_1.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
@@ -601,7 +605,7 @@ public class Addfees extends javax.swing.JFrame {
 
         bankname_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         bankname_label.setText("Bank Name:");
-        jPanel3.add(bankname_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
+        jPanel3.add(bankname_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
 
         bank_name_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
         bank_name_field.addActionListener(new java.awt.event.ActionListener() {
@@ -609,7 +613,7 @@ public class Addfees extends javax.swing.JFrame {
                 bank_name_fieldActionPerformed(evt);
             }
         });
-        jPanel3.add(bank_name_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 90, -1));
+        jPanel3.add(bank_name_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 90, 22));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 490, -1));
 
@@ -761,8 +765,20 @@ public class Addfees extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Amount_fieldActionPerformed
 
+    
     private void first_amountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_first_amountActionPerformed
-        // TODO add your handling code here:
+        String amountNumber = first_amount.getText();
+        float amt = Float.parseFloat(amountNumber);
+        
+        float cgst = amt * 0.07F;
+        float sgst = amt * 0.06F;
+        
+        Cgst_field.setText(Float.toString(cgst));
+        Sgst_field.setText(Float.toString(sgst));
+        
+        float Totalamt = amt+cgst+sgst;
+        Total_amount_field.setText(Float.toString(Totalamt));
+        
     }//GEN-LAST:event_first_amountActionPerformed
 
     private void Cgst_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cgst_fieldActionPerformed
@@ -814,6 +830,12 @@ public class Addfees extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_receiver_fieldActionPerformed
 
+    private void first_amountKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_first_amountKeyTyped
+        
+    }//GEN-LAST:event_first_amountKeyTyped
+
+
+    
     /**
      * @param args the command line arguments
      */
@@ -847,7 +869,7 @@ public class Addfees extends javax.swing.JFrame {
     private javax.swing.JLabel Cgst_label;
     private javax.swing.JLabel Cheque_Label;
     private javax.swing.JTextField Cheque_field;
-    private javax.swing.JComboBox<String> Courses_dropdown1;
+    private javax.swing.JComboBox<String> Courses_dropdown;
     private com.toedter.calendar.JDateChooser DateChooser;
     private javax.swing.JLabel GooglePay_Label;
     private javax.swing.JTextField GooglePay_field;
