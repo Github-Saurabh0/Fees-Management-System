@@ -181,25 +181,25 @@ public class Addfees extends javax.swing.JFrame {
             return false;
         }
 
-        if (Cgst_field.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "Please Enter CGST ");
-            return false;
-        }
-
-        if (Sgst_field.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "Please Enter SGST ");
-            return false;
-        }
-
-        if (Total_in_words_field.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "Please Enter Total Amount in words ");
-            return false;
-        }
-
-        if (Total_amount_field.getText().equals("")) {
-            JOptionPane.showMessageDialog(this, "Please Enter Total Amount ");
-            return false;
-        }
+//        if (Cgst_field.getText().equals("")) {
+//            JOptionPane.showMessageDialog(this, "Please Enter CGST ");
+//            return false;
+//        }
+//
+//        if (Sgst_field.getText().equals("")) {
+//            JOptionPane.showMessageDialog(this, "Please Enter SGST ");
+//            return false;
+//        }
+//
+//        if (Total_in_words_field.getText().equals("")) {
+//            JOptionPane.showMessageDialog(this, "Please Enter Total Amount in words ");
+//            return false;
+//        }
+//
+//        if (Total_amount_field.getText().equals("")) {
+//            JOptionPane.showMessageDialog(this, "Please Enter Total Amount ");
+//            return false;
+//        }
 
         if (Remark_field.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Please Enter Remark ");
@@ -420,6 +420,8 @@ public class Addfees extends javax.swing.JFrame {
         Remark_label.setText("Remark: ");
         jPanel4.add(Remark_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 70, 20));
 
+        Total_in_words_field.setEditable(false);
+        Total_in_words_field.setBackground(new java.awt.Color(255, 255, 255));
         Total_in_words_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
         Total_in_words_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -488,6 +490,8 @@ public class Addfees extends javax.swing.JFrame {
         Cgst_label.setText("CGST 7%");
         jPanel4.add(Cgst_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, -1, 20));
 
+        Cgst_field.setEditable(false);
+        Cgst_field.setBackground(new java.awt.Color(255, 255, 255));
         Cgst_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
         Cgst_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -504,6 +508,8 @@ public class Addfees extends javax.swing.JFrame {
         Sgst_label.setText("SGST 6%");
         jPanel4.add(Sgst_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, -1, 20));
 
+        Sgst_field.setEditable(false);
+        Sgst_field.setBackground(new java.awt.Color(255, 255, 255));
         Sgst_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
         Sgst_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -516,6 +522,8 @@ public class Addfees extends javax.swing.JFrame {
         Signature_label.setText("Signature");
         jPanel4.add(Signature_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, -1, 20));
 
+        Total_amount_field.setEditable(false);
+        Total_amount_field.setBackground(new java.awt.Color(255, 255, 255));
         Total_amount_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
         Total_amount_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
