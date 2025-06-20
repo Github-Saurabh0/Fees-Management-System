@@ -182,25 +182,6 @@ public class Addfees extends javax.swing.JFrame {
             return false;
         }
 
-//        if (Cgst_field.getText().equals("")) {
-//            JOptionPane.showMessageDialog(this, "Please Enter CGST ");
-//            return false;
-//        }
-//
-//        if (Sgst_field.getText().equals("")) {
-//            JOptionPane.showMessageDialog(this, "Please Enter SGST ");
-//            return false;
-//        }
-//
-//        if (Total_in_words_field.getText().equals("")) {
-//            JOptionPane.showMessageDialog(this, "Please Enter Total Amount in words ");
-//            return false;
-//        }
-//
-//        if (Total_amount_field.getText().equals("")) {
-//            JOptionPane.showMessageDialog(this, "Please Enter Total Amount ");
-//            return false;
-//        }
 
         if (Remark_field.getText().equals("")) {
             JOptionPane.showMessageDialog(this, "Please Enter Remark ");
@@ -257,12 +238,9 @@ public class Addfees extends javax.swing.JFrame {
         rollno_label = new javax.swing.JLabel();
         first_amount = new javax.swing.JTextField();
         Cgst_label = new javax.swing.JLabel();
-        Cgst_field = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
         Sgst_label = new javax.swing.JLabel();
-        Sgst_field = new javax.swing.JTextField();
         Signature_label = new javax.swing.JLabel();
-        Total_amount_field = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
         Total_label = new javax.swing.JLabel();
         Totalwords_label = new javax.swing.JLabel();
@@ -273,6 +251,9 @@ public class Addfees extends javax.swing.JFrame {
         received_month_field_1 = new javax.swing.JComboBox<>();
         Receiver_label = new javax.swing.JLabel();
         receiver_field = new javax.swing.JTextField();
+        total_field = new javax.swing.JTextField();
+        cgst_field = new javax.swing.JTextField();
+        sgst_field = new javax.swing.JTextField();
         payment_mode_dropdown = new javax.swing.JComboBox<>();
         bankname_label = new javax.swing.JLabel();
         bank_name_field = new javax.swing.JTextField();
@@ -427,7 +408,7 @@ public class Addfees extends javax.swing.JFrame {
                 Total_in_words_fieldActionPerformed(evt);
             }
         });
-        jPanel4.add(Total_in_words_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 130, 22));
+        jPanel4.add(Total_in_words_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 200, 22));
 
         jLabel15.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel15.setText("Received from for the given month ");
@@ -479,6 +460,14 @@ public class Addfees extends javax.swing.JFrame {
         jPanel4.add(rollno_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, -1, 20));
 
         first_amount.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        first_amount.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                first_amountMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                first_amountMouseExited(evt);
+            }
+        });
         first_amount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 first_amountActionPerformed(evt);
@@ -494,16 +483,7 @@ public class Addfees extends javax.swing.JFrame {
 
         Cgst_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         Cgst_label.setText("CGST 7%");
-        jPanel4.add(Cgst_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, -1, 20));
-
-        Cgst_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        Cgst_field.setForeground(new java.awt.Color(0, 153, 102));
-        Cgst_field.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Cgst_fieldActionPerformed(evt);
-            }
-        });
-        jPanel4.add(Cgst_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 80, 23));
+        jPanel4.add(Cgst_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 140, 70, 20));
 
         jSeparator3.setBackground(new java.awt.Color(0, 0, 51));
         jSeparator3.setForeground(new java.awt.Color(51, 0, 51));
@@ -511,30 +491,11 @@ public class Addfees extends javax.swing.JFrame {
 
         Sgst_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         Sgst_label.setText("SGST 6%");
-        jPanel4.add(Sgst_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, -1, 20));
-
-        Sgst_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        Sgst_field.setForeground(new java.awt.Color(0, 153, 102));
-        Sgst_field.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Sgst_fieldActionPerformed(evt);
-            }
-        });
-        jPanel4.add(Sgst_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 80, 23));
-        Sgst_field.getAccessibleContext().setAccessibleDescription("");
+        jPanel4.add(Sgst_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 70, 20));
 
         Signature_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         Signature_label.setText("Signature");
         jPanel4.add(Signature_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, -1, 20));
-
-        Total_amount_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
-        Total_amount_field.setForeground(new java.awt.Color(0, 153, 102));
-        Total_amount_field.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Total_amount_fieldActionPerformed(evt);
-            }
-        });
-        jPanel4.add(Total_amount_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 80, 23));
 
         jSeparator4.setBackground(new java.awt.Color(0, 0, 51));
         jSeparator4.setForeground(new java.awt.Color(51, 0, 51));
@@ -542,7 +503,7 @@ public class Addfees extends javax.swing.JFrame {
 
         Total_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         Total_label.setText("Total:");
-        jPanel4.add(Total_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, -1, 20));
+        jPanel4.add(Total_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 50, 20));
 
         Totalwords_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         Totalwords_label.setText("Total in Words:");
@@ -589,6 +550,30 @@ public class Addfees extends javax.swing.JFrame {
             }
         });
         jPanel4.add(receiver_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 80, -1));
+
+        total_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        total_field.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                total_fieldActionPerformed(evt);
+            }
+        });
+        jPanel4.add(total_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 80, 23));
+
+        cgst_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        cgst_field.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cgst_fieldActionPerformed(evt);
+            }
+        });
+        jPanel4.add(cgst_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 80, 23));
+
+        sgst_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        sgst_field.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sgst_fieldActionPerformed(evt);
+            }
+        });
+        jPanel4.add(sgst_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 80, 23));
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 490, -1));
 
@@ -767,31 +752,9 @@ public class Addfees extends javax.swing.JFrame {
 
     
     private void first_amountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_first_amountActionPerformed
-        String amountNumber = first_amount.getText();
-        float amt = Float.parseFloat(amountNumber);
-        
-        float cgst = amt * 0.07F;
-        float sgst = amt * 0.06F;
-        
-        Cgst_field.setText(Float.toString(cgst));
-        Sgst_field.setText(Float.toString(sgst));
-        
-        float Totalamt = amt+cgst+sgst;
-        Total_amount_field.setText(Float.toString(Totalamt));
+    
         
     }//GEN-LAST:event_first_amountActionPerformed
-
-    private void Cgst_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cgst_fieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Cgst_fieldActionPerformed
-
-    private void Sgst_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sgst_fieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Sgst_fieldActionPerformed
-
-    private void Total_amount_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Total_amount_fieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Total_amount_fieldActionPerformed
 
     private void Print_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_buttonActionPerformed
         Validation();
@@ -834,6 +797,64 @@ public class Addfees extends javax.swing.JFrame {
         
     }//GEN-LAST:event_first_amountKeyTyped
 
+    private void total_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_total_fieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_total_fieldActionPerformed
+
+    private void cgst_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cgst_fieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cgst_fieldActionPerformed
+
+    private void sgst_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sgst_fieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sgst_fieldActionPerformed
+
+    private void first_amountMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_first_amountMouseClicked
+        
+    }//GEN-LAST:event_first_amountMouseClicked
+
+    public static String convertToWords(int n) {
+    final String[] units = { "", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
+                             "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen",
+                             "Eighteen", "Nineteen" };
+
+    final String[] tens = { "", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };
+
+    if (n < 20) return units[n];
+
+    if (n < 100) return tens[n / 10] + (n % 10 != 0 ? " " + convertToWords(n % 10) : "");
+
+    if (n < 1000) return units[n / 100] + " Hundred" + (n % 100 != 0 ? " " + convertToWords(n % 100) : "");
+
+    if (n < 100000) return convertToWords(n / 1000) + " Thousand" + (n % 1000 != 0 ? " " + convertToWords(n % 1000) : "");
+
+    return "Number too large";
+}
+
+    private void first_amountMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_first_amountMouseExited
+        String amountNumber = first_amount.getText();
+        float amt = Float.parseFloat(amountNumber);
+        float cgst = amt * 0.07F;
+        float sgst = amt * 0.06F;
+        cgst_field.setText(Float.toString(cgst));
+        sgst_field.setText(Float.toString(sgst));
+        float Totalamt = amt+cgst+sgst;
+        total_field.setText(Float.toString(Totalamt));
+        
+        String totalStr = total_field.getText();
+
+        if (totalStr != null && !totalStr.isEmpty()) {
+            try {
+                float totalValue = Float.parseFloat(totalStr);
+                int roundedTotal = Math.round(totalValue); // Decimal ignore karna ho to
+                String words = convertToWords(roundedTotal);
+                Total_in_words_field.setText(words + " Only");
+            } catch (NumberFormatException e) {
+                Total_in_words_field.setText("Invalid Amount");
+            }
+        }
+        
+    }//GEN-LAST:event_first_amountMouseExited
 
     
     /**
@@ -865,7 +886,6 @@ public class Addfees extends javax.swing.JFrame {
     private javax.swing.JTextField Amount_field;
     private javax.swing.JLabel Cash_Label;
     private javax.swing.JTextField Cash_fields;
-    private javax.swing.JTextField Cgst_field;
     private javax.swing.JLabel Cgst_label;
     private javax.swing.JLabel Cheque_Label;
     private javax.swing.JTextField Cheque_field;
@@ -887,10 +907,8 @@ public class Addfees extends javax.swing.JFrame {
     private javax.swing.JLabel Remark_label;
     private javax.swing.JTextField Rollno_field;
     private javax.swing.JButton Search_button;
-    private javax.swing.JTextField Sgst_field;
     private javax.swing.JLabel Sgst_label;
     private javax.swing.JLabel Signature_label;
-    private javax.swing.JTextField Total_amount_field;
     private javax.swing.JTextField Total_in_words_field;
     private javax.swing.JLabel Total_label;
     private javax.swing.JLabel Totalwords_label;
@@ -900,6 +918,7 @@ public class Addfees extends javax.swing.JFrame {
     private javax.swing.JButton back_button;
     private javax.swing.JTextField bank_name_field;
     private javax.swing.JLabel bankname_label;
+    private javax.swing.JTextField cgst_field;
     private javax.swing.JButton course_list_button;
     private javax.swing.JLabel courses_label;
     private javax.swing.JLabel date_label;
@@ -925,6 +944,8 @@ public class Addfees extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> received_month_field_2;
     private javax.swing.JTextField receiver_field;
     private javax.swing.JLabel rollno_label;
+    private javax.swing.JTextField sgst_field;
     private javax.swing.JLabel sr_no_label;
+    private javax.swing.JTextField total_field;
     // End of variables declaration//GEN-END:variables
 }
