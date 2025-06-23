@@ -534,6 +534,11 @@ public class Addfees extends javax.swing.JFrame {
         Courses_dropdown.setBackground(new java.awt.Color(255, 204, 0));
         Courses_dropdown.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
         Courses_dropdown.setForeground(new java.awt.Color(255, 255, 236));
+        Courses_dropdown.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Courses_dropdownActionPerformed(evt);
+            }
+        });
         jPanel4.add(Courses_dropdown, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 110, -1));
 
         received_month_field_1.setBackground(new java.awt.Color(255, 204, 0));
@@ -594,7 +599,7 @@ public class Addfees extends javax.swing.JFrame {
 
         bankname_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         bankname_label.setText("Bank Name:");
-        jPanel3.add(bankname_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
+        jPanel3.add(bankname_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
         bank_name_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
         bank_name_field.addActionListener(new java.awt.event.ActionListener() {
@@ -859,6 +864,11 @@ public class Addfees extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_first_amountMouseExited
+
+    private void Courses_dropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Courses_dropdownActionPerformed
+        String s1 = Courses_dropdown.getSelectedItem().toString();
+        Amount_field.setText(s1);
+    }//GEN-LAST:event_Courses_dropdownActionPerformed
 
     public void fillComboBox(){
         try {
