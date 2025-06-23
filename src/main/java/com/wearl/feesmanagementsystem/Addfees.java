@@ -4,6 +4,10 @@
  */
 package com.wearl.feesmanagementsystem;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 
 /**
@@ -94,6 +98,7 @@ public class Addfees extends javax.swing.JFrame {
     public Addfees() {
         initComponents();
         displayCashZero();
+        fillComboBox();
     }
 
     boolean Validation() {
@@ -389,14 +394,14 @@ public class Addfees extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel11.setText("to");
-        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 20, 20));
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 20, 20));
 
         received_month_field_2.setBackground(new java.awt.Color(255, 204, 0));
         received_month_field_2.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
         received_month_field_2.setForeground(new java.awt.Color(255, 255, 236));
         received_month_field_2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
         received_month_field_2.setSelectedIndex(7);
-        jPanel4.add(received_month_field_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 90, -1));
+        jPanel4.add(received_month_field_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, 90, -1));
 
         Remark_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         Remark_label.setText("Remark: ");
@@ -412,7 +417,7 @@ public class Addfees extends javax.swing.JFrame {
 
         jLabel15.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel15.setText("Received from for the given month ");
-        jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 20));
+        jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 20));
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 51));
         jSeparator1.setForeground(new java.awt.Color(51, 0, 51));
@@ -424,7 +429,7 @@ public class Addfees extends javax.swing.JFrame {
 
         courses_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         courses_label.setText("Course:");
-        jPanel4.add(courses_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, -1, 20));
+        jPanel4.add(courses_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 40, 60, 20));
 
         sr_no_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         sr_no_label.setText("Sr No.");
@@ -529,19 +534,18 @@ public class Addfees extends javax.swing.JFrame {
         Courses_dropdown.setBackground(new java.awt.Color(255, 204, 0));
         Courses_dropdown.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
         Courses_dropdown.setForeground(new java.awt.Color(255, 255, 236));
-        Courses_dropdown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Java Adv", "C++", "Dart", "Mern stack" }));
-        jPanel4.add(Courses_dropdown, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, -1, -1));
+        jPanel4.add(Courses_dropdown, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 110, -1));
 
         received_month_field_1.setBackground(new java.awt.Color(255, 204, 0));
         received_month_field_1.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
         received_month_field_1.setForeground(new java.awt.Color(255, 255, 236));
         received_month_field_1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" }));
         received_month_field_1.setSelectedIndex(5);
-        jPanel4.add(received_month_field_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 10, 100, -1));
+        jPanel4.add(received_month_field_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 100, -1));
 
         Receiver_label.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         Receiver_label.setText("Receiver:");
-        jPanel4.add(Receiver_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, 20));
+        jPanel4.add(Receiver_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, 20));
 
         receiver_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
         receiver_field.addActionListener(new java.awt.event.ActionListener() {
@@ -549,7 +553,7 @@ public class Addfees extends javax.swing.JFrame {
                 receiver_fieldActionPerformed(evt);
             }
         });
-        jPanel4.add(receiver_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 80, -1));
+        jPanel4.add(receiver_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 90, -1));
 
         total_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
         total_field.addActionListener(new java.awt.event.ActionListener() {
@@ -856,6 +860,30 @@ public class Addfees extends javax.swing.JFrame {
         
     }//GEN-LAST:event_first_amountMouseExited
 
+    public void fillComboBox(){
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url = "jdbc:mysql://localhost:3306/wtfmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL";
+            //2. Establishing Statement or Connection
+            Connection con = DriverManager.getConnection(url, "root", "Jaimaiki12345#");
+            // Ek normal insert query chala rha hu jisse me jo course table ke andar ka cname bala date mil jaye
+            String sql = "Select Cname from course";
+            //3. con ke pass ek prepareStatement nam ka function hota hai or ye preparedStatement naam ka data return krta hai  
+            PreparedStatement st = con.prepareStatement(sql);
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next())
+            {
+                Courses_dropdown.addItem(rs.getString("Cname"));
+            }
+            
+            
+        } catch (Exception e) 
+        {
+            e.printStackTrace();
+        }
+    }
+    
     
     /**
      * @param args the command line arguments
