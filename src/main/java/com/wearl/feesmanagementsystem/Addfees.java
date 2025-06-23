@@ -99,6 +99,8 @@ public class Addfees extends javax.swing.JFrame {
         initComponents();
         displayCashZero();
         fillComboBox();
+        int r = getReceiptNo();
+        Receipt_no_field.setText(Integer.toString(r));
     }
 
     boolean Validation() {
@@ -452,6 +454,7 @@ public class Addfees extends javax.swing.JFrame {
         jPanel4.add(Rollno_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, 70, -1));
 
         Amount_field.setFont(new java.awt.Font("Trebuchet MS", 1, 10)); // NOI18N
+        Amount_field.setForeground(new java.awt.Color(0, 102, 51));
         Amount_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Amount_fieldActionPerformed(evt);
@@ -888,10 +891,41 @@ public class Addfees extends javax.swing.JFrame {
             }
             
             
+            
         } catch (Exception e) 
         {
             e.printStackTrace();
         }
+    }
+    
+    
+        public int getReceiptNo(){
+            int rno = 0;
+            
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url = "jdbc:mysql://localhost:3306/wtfmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL";
+            //2. Establishing Statement or Connection
+            Connection con = DriverManager.getConnection(url, "root", "Jaimaiki12345#");
+            // Ek normal insert query chala rha hu jisse me jo course table ke andar ka cname bala date mil jaye
+            String sql = "Select Max(Receipt_no_field) from feesdetails";
+            //3. con ke pass ek prepareStatement nam ka function hota hai or ye preparedStatement naam ka data return krta hai  
+            PreparedStatement st = con.prepareStatement(sql);
+            ResultSet rs = st.executeQuery(sql);
+            
+            if(rs.next()==true)
+            {
+                rno = rs.getInt("Receipt_no_field");
+            }
+            
+            
+            
+        } catch (Exception e) 
+        {
+            e.printStackTrace();
+        }
+        
+        return rno;
     }
     
     
