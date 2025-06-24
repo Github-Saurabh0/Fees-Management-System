@@ -45,7 +45,8 @@ Designed with **Object-Oriented Programming** principles and built using **Java 
 Fees-Management-System/
 │
 ├── screenshots/
-│   └── SignUpPage.png                   # GUI image for README preview
+│   ├── SignUpPage.png 
+│   ├── LoginPage.png
 │
 ├── src/
 │   └── main/
@@ -78,6 +79,9 @@ Fees-Management-System/
 
 ### 📝 SignUp Page  
 ![SignUp GUI](screenshots/SignUpPage.png)
+
+### 📝 Login Page 
+![Login GUI](screenshots/LoginPage.png)
 
 *(You can add more screenshots in the `screenshots/` folder and reference them here.)*
 
