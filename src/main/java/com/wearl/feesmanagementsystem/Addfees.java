@@ -100,6 +100,7 @@ public class Addfees extends javax.swing.JFrame {
         displayCashZero();
         fillComboBox();
         int r = getReceiptNo();
+        r++;
         Receipt_no_field.setText(Integer.toString(r));
     }
 
