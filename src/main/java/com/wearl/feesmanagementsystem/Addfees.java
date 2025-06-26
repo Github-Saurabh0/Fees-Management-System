@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 
 /**
@@ -103,6 +104,31 @@ public class Addfees extends javax.swing.JFrame {
         r++;
         Receipt_no_field.setText(Integer.toString(r));
     }
+    
+    public String inserData(){
+        int Receiptno = Integer.parseInt(Receipt_no_field.getText());
+        String StudentReceiverName = receiver_field.getText();
+        int Rollno = Integer.parseInt(Rollno_field.getText());
+        String PaymentMode = payment_mode_dropdown.getSelectedItem().toString();
+        String Cashfield = Cash_fields.getText();
+        String Googlepayfield = GooglePay_field.getText();
+        String PhonePefield = PhonePe_field.getText();
+        String Chequefield = Cheque_field.getText();
+        String Coursesdropdown = Courses_dropdown.getSelectedItem().toString();
+        int totalfield = Integer.parseInt(total_field.getText());
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+        String Dobfinal = sdf.format(DateChooser.getDate());
+        float firstamount = Float.parseFloat(first_amount.getText());
+        float cgstfield = Float.parseFloat(cgst_field.getText());
+        float sgstfield = Float.parseFloat(sgst_field.getText());
+        String Totalinwordsfield = Total_in_words_field.getText();
+        String Remarkfield = Remark_field.getText();
+        String receivedmonthfield_1 = received_month_field_1.getSelectedItem().toString();
+        String receivedmonthfield2 = received_month_field_2.getSelectedItem().toString();
+        String banknamefield = bank_name_field.getText();
+    }
+    
+    
 
     boolean Validation() {
 
