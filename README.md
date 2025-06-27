@@ -89,6 +89,8 @@ Fees-Management-System/
 ### 🖥️ Dashboard 
 ![Dashboard GUI](screenshots/Dashboard.png)
 
+### 📰 Add Fees dashboard 
+![Add fees Dashboard GUI](screenshots/Addfees.png)
 
 *(You can add more screenshots in the `screenshots/` folder and reference them here.)*
 
