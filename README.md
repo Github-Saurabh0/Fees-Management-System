@@ -80,11 +80,15 @@ Fees-Management-System/
 ### 📝 SignUp Page  
 ![SignUp GUI](screenshots/SignUpPage.png)
 
-### 📝 Login Page 
+### 👤 Login Page 
 ![Login GUI](screenshots/LoginPage.png)
 
-### 📝 Home Page 
+### 🏠 Home Page 
 ![Homepage GUI](screenshots/Homepage.png)
+
+### 🖥️ Dashboard 
+![Dashboard GUI](screenshots/Dashboard.png)
+
 
 *(You can add more screenshots in the `screenshots/` folder and reference them here.)*
 
