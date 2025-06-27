@@ -83,6 +83,9 @@ Fees-Management-System/
 ### 📝 Login Page 
 ![Login GUI](screenshots/LoginPage.png)
 
+### 📝 Home Page 
+![Homepage GUI](screenshots/Homepage.png)
+
 *(You can add more screenshots in the `screenshots/` folder and reference them here.)*
 
 ---
