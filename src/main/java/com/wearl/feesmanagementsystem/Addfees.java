@@ -105,17 +105,17 @@ public class Addfees extends javax.swing.JFrame {
         Receipt_no_field.setText(Integer.toString(r));
     }
     
-    public String inserData(){
+    public void inserData(){
         int Receiptno = Integer.parseInt(Receipt_no_field.getText());
         String StudentReceiverName = receiver_field.getText();
-        int Rollno = Integer.parseInt(Rollno_field.getText());
+        String Rollno = Rollno_field.getText();
         String PaymentMode = payment_mode_dropdown.getSelectedItem().toString();
         String Cashfield = Cash_fields.getText();
         String Googlepayfield = GooglePay_field.getText();
         String PhonePefield = PhonePe_field.getText();
         String Chequefield = Cheque_field.getText();
         String Coursesdropdown = Courses_dropdown.getSelectedItem().toString();
-        int totalfield = Integer.parseInt(total_field.getText());
+        float totalfield = Float.parseFloat(total_field.getText());
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
         String Dobfinal = sdf.format(DateChooser.getDate());
         float firstamount = Float.parseFloat(first_amount.getText());
@@ -123,9 +123,54 @@ public class Addfees extends javax.swing.JFrame {
         float sgstfield = Float.parseFloat(sgst_field.getText());
         String Totalinwordsfield = Total_in_words_field.getText();
         String Remarkfield = Remark_field.getText();
-        String receivedmonthfield_1 = received_month_field_1.getSelectedItem().toString();
-        String receivedmonthfield2 = received_month_field_2.getSelectedItem().toString();
         String banknamefield = bank_name_field.getText();
+        String receivedmonthfield1 = received_month_field_1.getSelectedItem().toString();
+        String receivedmonthfield2 = received_month_field_2.getSelectedItem().toString();
+        
+        
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String url = "jdbc:mysql://localhost:3306/wtfmsdb?zeroDateTimeBehavior=CONVERT_TO_NULL";
+            //2. Establishing Statement or Connection
+            Connection con = DriverManager.getConnection(url, "root", "Jaimaiki12345#");
+            // Ek normal insert query chala rha hu jisse me jo course table ke andar ka cname bala date mil jaye
+            String sql = "Insert into feesdetails values(?, ? ,? ,? ,? ,?, ?, ?, ?, ?, ? ,? ,? ,? ,?, ?, ?, ?, ?)";
+            //3. con ke pass ek prepareStatement nam ka function hota hai or ye preparedStatement naam ka data return krta hai  
+            PreparedStatement st = con.prepareStatement(sql);
+            
+            st.setInt(1, Receiptno);
+            st.setString(2, StudentReceiverName);
+            st.setString(3, Rollno);
+            st.setString(4, PaymentMode);
+            st.setString(5, Cashfield);
+            st.setString(6, Googlepayfield);
+            st.setString(7, PhonePefield);
+            st.setString(8, Chequefield);
+            st.setString(9, Coursesdropdown);
+            st.setFloat(10, totalfield);
+            st.setString(11, Dobfinal);
+            st.setFloat(12, firstamount);
+            st.setFloat(13, cgstfield);
+            st.setFloat(14, sgstfield);
+            st.setString(15, Totalinwordsfield);
+            st.setString(16, Remarkfield);
+            st.setString(17, banknamefield);
+            st.setString(18, receivedmonthfield1);
+            st.setString(19, receivedmonthfield2);
+            
+            int i = st.executeUpdate();
+            
+            if (i > 0) {
+                JOptionPane.showMessageDialog(this, "Thank you for fees Submission");
+            } else {
+                JOptionPane.showMessageDialog(this, "Issue");
+            }
+            
+        } catch (Exception e) 
+        {
+            e.printStackTrace();
+        }
+        
     }
     
     
@@ -211,10 +256,21 @@ public class Addfees extends javax.swing.JFrame {
             return false;
         }
 
-        if (first_amount.getText().trim().isEmpty() || !first_amount.getText().matches("\\d+")) {
-            JOptionPane.showMessageDialog(this, "Please Enter Amount (In Numbers)");
+        try {
+            float amount = Float.parseFloat(first_amount.getText().trim());
+            if (amount <= 0) {
+                JOptionPane.showMessageDialog(this, "Amount should be greater than 0");
+                return false;
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Please enter a valid numeric amount");
             return false;
         }
+
+//        if (first_amount.getText().trim().isEmpty() || !first_amount.getText().matches("\\d+")) {
+//            JOptionPane.showMessageDialog(this, "Please Enter Amount (In Numbers)");
+//            return false;
+//        }
 
 
         if (Remark_field.getText().equals("")) {
@@ -791,12 +847,35 @@ public class Addfees extends javax.swing.JFrame {
 
     
     private void first_amountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_first_amountActionPerformed
-    
-        
+        String amountNumber = first_amount.getText().trim();
+
+        if (amountNumber.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please enter a valid amount.");
+            return;
+        }
+
+        try {
+            float amt = Float.parseFloat(amountNumber);
+            float cgst = amt * 0.07F;
+            float sgst = amt * 0.06F;
+            cgst_field.setText(Float.toString(cgst));
+            sgst_field.setText(Float.toString(sgst));
+            float Totalamt = amt + cgst + sgst;
+            total_field.setText(Float.toString(Totalamt));
+
+            int roundedTotal = Math.round(Totalamt);
+            String words = convertToWords(roundedTotal);
+            Total_in_words_field.setText(words + " Only");
+
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Please enter amount in numbers only.");
+            Total_in_words_field.setText("Invalid Amount");
+        }
     }//GEN-LAST:event_first_amountActionPerformed
 
     private void Print_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Print_buttonActionPerformed
         Validation();
+        inserData();
     }//GEN-LAST:event_Print_buttonActionPerformed
 
     private void payment_mode_dropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payment_mode_dropdownActionPerformed
@@ -871,27 +950,7 @@ public class Addfees extends javax.swing.JFrame {
 }
 
     private void first_amountMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_first_amountMouseExited
-        String amountNumber = first_amount.getText();
-        float amt = Float.parseFloat(amountNumber);
-        float cgst = amt * 0.07F;
-        float sgst = amt * 0.06F;
-        cgst_field.setText(Float.toString(cgst));
-        sgst_field.setText(Float.toString(sgst));
-        float Totalamt = amt+cgst+sgst;
-        total_field.setText(Float.toString(Totalamt));
         
-        String totalStr = total_field.getText();
-
-        if (totalStr != null && !totalStr.isEmpty()) {
-            try {
-                float totalValue = Float.parseFloat(totalStr);
-                int roundedTotal = Math.round(totalValue); // Decimal ignore karna ho to
-                String words = convertToWords(roundedTotal);
-                Total_in_words_field.setText(words + " Only");
-            } catch (NumberFormatException e) {
-                Total_in_words_field.setText("Invalid Amount");
-            }
-        }
         
     }//GEN-LAST:event_first_amountMouseExited
 
@@ -925,6 +984,8 @@ public class Addfees extends javax.swing.JFrame {
         }
     }
     
+
+   
     
         public int getReceiptNo(){
             int rno = 0;
@@ -935,17 +996,15 @@ public class Addfees extends javax.swing.JFrame {
             //2. Establishing Statement or Connection
             Connection con = DriverManager.getConnection(url, "root", "Jaimaiki12345#");
             // Ek normal insert query chala rha hu jisse me jo course table ke andar ka cname bala date mil jaye
-            String sql = "Select Max(Receipt_no_field) from feesdetails";
+             String sql = "SELECT MAX(Receipt_no_field) AS max_rno FROM feesdetails";
             //3. con ke pass ek prepareStatement nam ka function hota hai or ye preparedStatement naam ka data return krta hai  
             PreparedStatement st = con.prepareStatement(sql);
             ResultSet rs = st.executeQuery(sql);
             
             if(rs.next()==true)
             {
-                rno = rs.getInt("Receipt_no_field");
+                rno = rs.getInt("max_rno");
             }
-            
-            
             
         } catch (Exception e) 
         {
